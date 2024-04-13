@@ -1,0 +1,225 @@
+
+4 Results
+
+The results are divided into three key analyses. Section 4.1
+shows the overall detection rates for each phishing e-mail
+per display condition. Section 4.2 describes the fitted e-mail
+feature regressions. Section 4.3 describes the hierarchical re-
+gressions on personal traits to predict phishing susceptibility.
+
+4.1 Phishing detection varies widely by e-mail
+type and is the worst in Bodyless
+
+According to the overall hypothesis, higher phishing detection
+proportions would be expected in the Bodyless condition for
+phishing e-mails 1, 5, 6, 7 and 8, which contained clearly
+suspicious header details. Table 2 shows the phishing detec-
+tion proportions per condition per e-mail, and corresponding
+x2 -tests for proportional equality. Phishing e-mail 5 was de-
+tected by the majority of participants in all conditions, as well
+as the “Nigerian prince’’-style phishing e-mails (3 and 4) in
+Control and Headerless (x7(2,N = 252) = 42,49, p< .001).
+Phishing e-mail 7 about updating Microsoft payment details
+was detected at around chance level in all conditions. The
+remaining four phishing e-mails were at most detected by
+29% of participants across all three conditions.
+
+Most relative detection proportions were as expected, ex-
+cept for phishing e-mails 1, 2 and 6, although the lower
+detection proportions in Headerless for phishing e-mails 1
+and 2 could also be considered as expected at trend level
+(x7 (2,N = 252) = 3.80, p = .150; y2(2,N = 252) = 4.52,
+
+Eighteenth Symposium on Usable Privacy and Security 259
+
+
+
+
+
+p=.100). Detection of phishing e-mail 6 was worst in Head-
+erless (¥7(2,N = 252) = 12.13, p=.010), while a detection
+proportion comparable to Control would have been expected
+in the best case scenario. That is, if participants in Header-
+less hovered over the hyperlink and recognized the suspicious
+URL.
+
+Of note is that in Bodyless, one participant labeled phish-
+ing e-mail 1 as “Other”, despite correctly identifying the
+homograph attack. They commented “No informative subject,
+accent on the e in sam.jones anneon email address”. This
+suggests that people may perfectly spot the discrepancy in
+sender details, but lack the knowledge that these are inten-
+tional deception tactics.
+
+4.2 Phishing detection is not predicted by e-
+mail characteristics
+
+To see if people use consistent rules to infer suspiciousness
+from e-mail characteristics, linear regressions were run with
+e-mail characteristics to predict the phishing detection pro-
+portions in each display condition. In Control, the full model
+yielded a significant regression (F (24,22) =2.187, p=.035,
+R? = 0.7047, Reaj = 0.3825) where more linguistic errors
+(B=—3.334, p=.023) and presence of the Anneon company
+name in the sender e-mail address (8 = —0.200, p = .038)
+predicted lower phishing proportions. The former can be ex-
+plained by the absence of linguistic errors in the phishing
+e-mails and presence of some grammatical errors and typos in
+some legitimate e-mails. In Headerless, a multiple regression
+predicting phishing detection proportions with only e-mail
+header-based features was not significant (F (19,27) = 1.425,
+p=.195, R? =0.500, R74; =0.149).
+
+In Bodyless, a significant regression (F (9,37) = 3.186,
+p= .006, R? = 0.450, Rig; = 0.298) was fit with all e-mail
+header-based features. Longer subject lines were found to
+predict higher phishing detection proportions (8 =0.002, p<
+0.001). Phishing e-mail 5 had the longest subject line of
+all e-mails and had the highest detection rate in Bodyless,
+which explains this small, but highly significant effect. Since
+none of the other e-mail characteristics significantly predicted
+phishing detection across conditions, people do not seem
+to use consistent strategies in differentiating phishing from
+genuine e-mails.
+
+260 Eighteenth Symposium on Usable Privacy and Security
+
+Even when participants hovered over phishing URLs,
+most did not raise suspicion. One common piece of se-
+curity advice is to check the true URLs of links in e-mails,
+by hovering over them [46]. To see if people do so, this
+study tracked and analyzed user interactions with e-mail links.
+Phishing e-mails 5, 6, 7 and 8 contained malicious URLs.
+Seven participants hovered over at least one of them. In two
+cases, the e-mail was labeled as “Phishing”. One of the three
+participants who hovered over the URL in phishing e-mail 7,
+labeled the e-mail as “Other”. For phishing e-mails 5 and 6,
+no URL hovers were observed in Control, nor for phishing e-
+mails 7 and 8 in Headerless—see Table 3. This suggests that
+most participants who labeled phishing e-mails as phishing
+did not base their judgments on the true URL of linked e-mail
+contents or did not know what to do with this information.
+
+4.3 Phishing detection is not reliably predicted
+by personal traits
+
+Overall, phishing detection accuracies varied greatly between
+participants. The mean phishing detection recall score was
+0.46 (SD=0.2) in Control, 0.25 (SD=0.18) in Bodyless and
+0.37 (SD=0.16) in Headerless, showing that most people
+detected less than half of all phishing e-mails. The mean
+phishing detection precision score was 0.93 (SD=0.18) in
+Control, 0.73 (SD=0.37) in Bodyless and 0.81 (SD=0.27) in
+Headerless, suggesting that when people think an e-mail is
+phishing, they are mostly correct.
+
+To investigate individual differences in phishing susceptibil-
+ity, hierarchical linear regressions were run to see if personal
+traits can reliably predict participants’ phishing detection re-
+call and precision scores. Table 4 shows ANOVA results
+that compare the added value of each hierarchical regression
+step in predicting phishing detection recall from personal
+traits. None of the steps significantly reduced model RSS
+compared to step | in Control and Headerless, and step 1
+regressions did not significantly predict phishing detection
+recall in Control (F(7,75) = 1.292, p = .266, R? = 0.108,
+Reaj =0.024), nor in Headerless (F (7,75) = 1.590, p=.152,
+R* =0.130, Reaj = 0.048). Only adding experiential ques-
+tion responses in step 2 in Bodyless significantly reduced
+RSS compared to step 1 and showed a significant regres-
+
+sion (F(12,71) =3.014, p=.002, R? =0.338, Rig; =0.226).
+
+USENIX Association
+
+
+
+
+
+
+
+
+
+Lower phishing detection recall was predicted by higher age
+(B = —0.003, p = .040), less frequent self-reported phish-
+ing reception (8 = —0.057, p = .003) and more profes-
+sional experience with executive assistance work (B = —0.054,
+p<0.001).
+
+None of the steps in the hierarchical regressions showed
+significant reductions in model residuals when predicting
+phishing detection precision from personal traits (see Ta-
+ble 5). Therefore, only step 1 regressions are reported further.
+In Control, the step 1 multiple regression with only demo-
+graphic traits was significant (F (7,75) = 2.436, p = .026,
+R?=0.185, Raj =0.109). Higher education level predicted
+higher phishing detection precision (B = 0.037, p = .013)
+and higher income predicted lower phishing detection pre-
+cision (B = —0.001, p =.018). Step 1 regressions did not
+significantly predict phishing detection precision in Body-
+less (F (7,76) = 1.620, p= .143, R? = 0.130, Reaj 0.050),
+nor in Headerless (F (7,75) = 1.309, p =.258, R? =0.109,
+Reaj = 0.026) conditions. Effect sizes of all significant pre-
+dictors were small and arguably of limited meaningful value.
+Note that using a different order of regression steps did not
+change the results.
+
+Higher age was associated with slower labeling responses
+in Control (r = 0.355, p = .002) and Bodyless (r = 0.341,
+p=.002). That is, older participants were slower at the task
+
+USENIX Association
+
+overall. However, no significant associations were found
+between mean labeling RTs and phishing detection recall or
+precision in any of the display conditions. This further implies
+that demographics do not reliably predict phishing detection
+ability.
+
+Adding “‘spam”’ as an accurate phishing detection label
+does not lead to more consistent results. Some partici-
+pants may have confused the meaning of “spam” and “phish-
+ing”. Hence, additional regressions with personal traits were
+run where both “spam” and “phishing” were regarded as ac-
+curate (true positive) labels for phishing e-mails and false
+positive labels for legitimate e-mails. This approach yielded
+prediction improvements for a step 2 regression in Control
+and step 4 regression in Headerless. Both regressions were
+significant. In the step 2 regression in Control (demograph-
+ics and experiential questions; F (12,70) = 1.973, p = .040,
+R* = 0.253, Raj = 0.125), older participants had a some-
+what higher phishing detection recall score (8 = —0.004,
+p = .014). The step 4 regression in Headerless (includ-
+ing all personal traits) predicted phishing detection recall
+at trend level (F (20,62) = 1.637, p = .072, R? = 0.346,
+Raj =0.135), where higher phishing detection recall was pre-
+dicted by higher mean extraversion (B =0.040, p=.003) and
+neuroticism (B = 0.033, p= .048). Higher mean agreeable-
+ness predicted lower phishing detection recall (8 = —0.040,
+
+Eighteenth Symposium on Usable Privacy and Security 261
+
+p=.012). None of the steps in the hierarchical regressions
+for the Bodyless condition were significant, meaning none
+of the personal traits predicted phishing detection recall in
+Bodyless, even when “spam” was considered as an accurate
+phishing detection label.
+
+In Control, phishing detection precision was significantly
+predicted in a step 3 regression with demographics, experi-
+ential questions and privacy concerns (F (7,76) = 1.995, p=
+.029, R? =0.309, Raj =0.154). Less frequent self-reported
+phishing reception (B = —0.041, p=.017) and higher IUIPC
+“control” dimension scores (B = —0.043, p=.014) predicted
+lower phishing detection precision. None of the hierarchical
+regressions predicting phishing detection precision in Body-
+less and Headerless were significant.
+
+Altogether, whereas more personal traits were found to
+predict phishing detection recall by including “spam” as an
+accurate phishing detection label, the effects remained in-
+consistent over conditions and effect sizes were of limited
+meaning. These analyses strongly suggest that personal traits
+(e.g., demographics, personality traits, privacy concerns) do
+not consistently relate to how susceptible people are to phish-
+ing e-mails.

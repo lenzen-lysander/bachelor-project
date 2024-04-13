@@ -1,0 +1,52 @@
+General Effect Sizes:
+Odds Ratio (OR)
+Risk Ratio (RR)
+
+Chi-squared Test Specific:
+Phi (For 2x2 tables)
+Cramer’s V (For larger tables)
+Tschuprow’s T
+Cohen’s w
+
+For Larger Tables:
+Pearson’s C
+Cohen’s g
+Cohen’s d
+Hedges’ g
+Glass’ delta
+Point Biserial Correlation Coefficient (Coef.)
+Biserial Correlation Coefficient
+Rank Biserial Correlation Coefficient
+
+Repeated Measures and Variants:
+Cohen’s dz / d(z)
+d (rm) (Repeated measures)
+Becker’s d (using control condition for standardization)
+d(av) (using average variance)
+d(r) (using residual variance)
+
+Correlation Coefficients and Related Measures:
+Tau
+Rho
+Pearson’s r
+R squared (Coefficient of Determination)
+Kendall’s W
+
+ANOVA and Regression Specific:
+Eta Squared
+Partial Eta Squared
+Generalized Eta Squared
+Omega Squared
+Epsilon Squared
+Adjusted Eta Squared
+Cohen’s f
+Rank-epsilon-squared
+Rank-eta-squared
+Standardized Coefficients (for each involved factor)
+R-squared (for omnibus tests)
+Adjusted R-squared
+Cohen’s f-squared
+
+Additional Variants and Considerations:
+Nagelkerke’s R-squared
+Cox-and-Snell R-squared

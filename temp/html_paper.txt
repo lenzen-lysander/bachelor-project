@@ -1,0 +1,1589 @@
+
+
+
+Virtual and Augmented Reality for Environmental Sustainability: A Systematic Review
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Virtual and Augmented Reality for Environmental Sustainability: A Systematic Review   
+
+
+
+
+Laura D Cosio, Gamification Group, Faculty of Information and communication sciences, Tampere University, Finland, 
+       laura.cosio@tuni.fi
+
+
+Oğuz 'Oz' Buruk, Gamification Group, Faculty of Information Technology and Communications, Tampere University, Finland, 
+       oguz.buruk@tuni.fi
+
+
+Daniel Fernández Galeote, Gamification Group, Faculty of Information Technology and Communication Sciences, Tampere University, Finland, 
+       daniel.fernandezgaleote@tuni.fi
+
+
+Isak De Villiers Bosman, Virtual Reality and Interaction Lab, Department of Information Science, University of Pretoria, South Africa, 
+       isak.bosman@up.ac.za
+
+
+Juho Hamari, Gamification Group, Faculty of Information Technology and Communication Sciences, Tampere University, Finland and Gamification Group, Faculty of Humanities, University of Turku, Finland, 
+       juho.hamari@tut.fi
+
+
+
+
+DOI: https://doi.org/10.1145/3544548.3581147 CHI '23: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, Hamburg, Germany, April 2023
+
+
+In recent years, extended reality (XR) technology has seen a rise in use in environmental subjects, i.e., climate change or biodiversity loss, as a potential tool to inform and engage the public with current and future environmental issues. However, research on the potential of XR technology for environmental sustainability is still in the early stages, and there is no clear synthesis of the methods studied in this field. To provide a clearer view of existing approaches and research objectives, we systematically reviewed current literature dealing with XR use in environmental topics. Although the results indicate that the volume of literature exploring XR in environmental applications is increasing, empirical evidence of its impact is limited, hindering the possibility of presently drawing significant conclusions on its potential benefits. Based on our analyses, we identified thematic, theoretical, and methodological knowledge gaps and provide a guideline to aid future research in the field.
+
+
+
+ CCS Concepts: • Human-centered computing → Virtual reality; • Human-centered computing → Mixed / augmented reality; • Applied computing → Environmental sciences; • Computing methodologies → Simulation environments; Interactive learning environments; • Applied computing~Psychology; 
+
+
+
+
+
+KEYWORDS:
+Augmented Reality, 
+Climate Change, 
+Environmental Sustainability, 
+Extended Reality, 
+Systematic Literature Review, 
+Virtual Reality
+
+
+
+ ACM Reference Format: Laura D. Cosio, Oğuz Buruk, Daniel Fernández Galeote, Isak de Villiers Bosman and Juho Hamari. 2023. Virtual and Augmented Reality for Environmental Sustainability: A Systematic Review. In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI '23), April 23-28, 2023, Hamburg, Germany. ACM, New York, NY, USA, 27 Pages. https://doi.org/10.1145/3544548.3581147
+
+
+
+
+
+
+
+
+ 1 INTRODUCTION
+
+
+We are living in the decade of extended reality (XR), with the last ten years seeing advances in virtual reality (VR) and augmented reality (AR) technology that brings it closer to the dreams portrayed in films such as Tron [1982] and Minority Report [2002]. Although XR technology has been around a long time, until recently its functionality, performance, and ease of use were limited, relegating it to a few labs and organizations [10,119]. From a design perspective, VR headsets especially posed several barriers to creating pleasant user experiences, as the hardware provided poor framerates and resolution and was also bulky and uncomfortable to wear [119]. However, advances in mobile technology, and the introduction of consumer-friendly VR headsets such as the Oculus Rift, have made it easier to develop applications for engaging, comfortable user experiences [10]. VR and AR have thus become popular in entertainment and gaming, but some have seen XR's potential beyond entertainment. Big corporations such as Meta and Microsoft have been investing in bringing existing work and collaboration tools to XR [161] as well as financing new ventures. These investments aim to make XR a dominant media distribution platform [58,161], potentially revolutionizing computational environments with by seamlessly integrating embodied interaction modalities [30,149,175]. Parallel with this rise in interest in XR in different fields such as retail [137,175], and occupational training [72,102], researchers investigating environmental issues have also created a body of work at the intersection of XR and Environmental Sustainability (ES).
+The global impacts of environmental change are increasingly apparent [71,125]. But researchers and activists have struggled to communicate the expected consequences of climate change to motivate action from political leaders and individuals alike [103]. Climate and environmental changes are complex and abstract subjects to communicate [80], however, there are also other factors, i.e., human and physical factors, that impede public action. Ongoing research aimed at identifying barriers to public action [56,94] highlights that the issue is as multifaceted as environmental change itself. This quality presents challenges in finding methods to mitigate or circumvent these obstacles and underlines the need to diversify communication about environmental change. Given how ingrained technology is in our lives, addressing how we interact with it would be a logical place to start. Academics in human-computer interaction (HCI) have held similar views, with sustainable HCI (SHCI) emerging as a subfield in recent years [59]. However, even the SHCI community had debated the best approach to tackle environmental change and promote the goals of ES [16]. In this regard, XR has immense potential; with it, we can build immersive, accurate replicas of our environment, enabling more effective communication and problem resolution [64,65,149]. XR's ability to generate first-person interactive experiences [120] has been shown to improve learning [6,98] and other psychological processes [50,131], including behavior and emotion [34,36,93]. Within academia, these elements have sparked interest in the technology's potential applications in education [134,178], medicine [72,130], and other fields [117,138].
+Although XR technology's benefits are being widely investigated, findings from one field often are not implemented in another [32,37]. Two prior reviews of XR research in environmental subjects have highlighted its potential in ES but acknowledged a lack of empirical evidence substantiating benefits [17,128]. Research remains unfocused, with no clear structure for using the technology in terms of context, content, and interaction, and there is no comprehensive analysis and overview guiding how to study the effects of XR in promoting ES. Without a thorough grasp of why XR and its features could benefit ES, we risk introducing XR "solutions" that fail to address ES and are potentially detrimental. To date, AR and VR research in ES has focused on the impact of immersive and non-immersive presentation forms, leaving other aspects such as emotionality or quality of the immersive environment underexplored [17]. Understanding what specific aspects of AR and VR, beyond mere immersion, might aid in the challenge of engaging and motivating people to act is critical.
+To fill this gap, we conducted a systematic literature review on 80 papers to synthesize existing methods and areas of study, highlighting current focuses and future research directions in ES using XR technology. We investigate the use of AR and VR in environmental sciences and nature, expanding on previous studies by examining the range of contexts, such as education or behavior modification. Even though the scope may be expanded further, we limit our review to ES to develop a better understanding of the current state of the field on its own. This review focuses on providing analyses of domains, interaction techniques, and elements in the existing literature. Additionally, we describe how they were used in studies and any findings reported. We compile the findings to create a draft for a future research agenda to address gaps and explore new avenues of research. Specifically, we answer the following research questions in this article:
+ 
+
+RQ1 In which contexts has XR been used to engage with environmental topics?
+
+
+RQ2 What XR technology was used in the field of ES and who was the intended demographic for these XR interventions in ES?
+
+
+RQ3 What engagement and interaction methods have been explored between XR technology and environmental topics?
+
+
+RQ4 What has been studied on the effects of XR use for environmental topics?
+ Our contribution in this paper is twofold: 
+     
+We give a comprehensive overview of the use of XR for environmental sustainability (ES) by analyzing the design of the applications, methodologies, and their effects on users.
+We provide a theoretical, thematic, and methodological agenda that paves the way for future research.
+
+
+Our results, by detailing the design and methods in XR applications for ES, give researchers and designers an improved perspective on the field, generate interest in pending research topics, and thereby encourage future development.
+
+
+
+
+ 2 BACKGROUND
+
+
+
+
+
+ 2.1 Barriers to engaging and promoting pro-environmental behavior in individuals
+
+
+Recent decades have seen rising concern about negative environmental changes such as biodiversity loss and global warming and action to combat them or slow their impact. International treaties such as the Paris Agreement promote economic and social transformation to address these harms [179]. Some policies and outreach methods have successfully educated individuals and promoted behavioral change. For example, providing accessible recycling facilities, has improved people's willingness to recycle [101]. However, we need a wider scale of action than a few individuals and policymakers to affect climate change [56].
+Although information about climate change continuously rises [103] there remains a lack of engagement and action from most of the world's population. Some face structural barriers, such as low income or lack of resources, that hinder their ability to make changes [52]. Regarding people who are not affected by structural barriers, finding out why there is a lack of engagement and action on their part and how to address it has sparked interest from many researchers [23,52,94]. One issue is that many in this group perceive environmental threats as distant, rather than as immediate issues that affect them [80,154]. Past research has highlighted that people perceive events as more threatening based on their immediacy, certainty, and personal implications [8,92]. They feel no need to alter their behavior to combat climate change, as they perceive it to have little impact on them and their social circle. Researchers in the field have collectively described this perceived temporal, spatial, and social distance from environmental issues as psychological distance [23,80,154].
+Another element potentially limiting action is an individual's perceived locus of control and self-efficacy [78] toward helping the environment and combating climate change. Researchers have been investigating the role of imagery and messaging in influencing individuals’ emotions and perceptions of climate change [44,61]. When study subjects were presented with images that induced negative emotions such as fear or anxiety, researchers were less successful in promoting behavioral change, as viewers were left with a sense of helplessness and lack of control [110,111,145]. Other people may understand the need for change but are unaware of what they can do to help. Social factors such as religion, political ideology, and individual perceptions of the norm can also interfere with behavior change [52].
+These diverse barriers complicate the development of methods to encourage behavioral changes and individual participation around environmental concerns. Traditional communication channels such as graphs, films, or brochures share information but may not mitigate the psychological or social barriers, as there remains an emotional distance between information and audience [70]. Instead of simply presenting information to users, finding methods that teach through interaction could bridge the distance between individual and subject, help individuals understand the impact of their actions, and improve their perceived control over the outcomes.
+An advantage of extended reality (XR) technology is that it allows for such interaction while also letting users visualize information and future scenarios. XR research outside ES has highlighted how it allows for the creation of first-person participatory experiences through interaction and immersion, providing a feedback loop between users’ actions and information [107,120]. Users gain a sense of ownership over their experiences and, in VR, their bodies, which can lead to a higher perception of plausibility and place illusion [148]. These aspects have made XR a promising training tool in many fields [178], but VR has specifically shown promise for psychological processes. VR research in journalism and psychology has highlighted its potential as an ‘empathy machine’ [20,139], improving users’ sense of self-efficacy [46,146], and aiding in other cognitive functions [49,50]. With these aspects in mind, Rambach et al. [2021] surveyed existing AR and VR applications addressing environmental topics, focusing on the contribution of select applications in nature, preservation, and resource efficiency. Their results concluded that at the time of their survey, there was only a limited amount of work within AR and VR with an ecological relationship [128]. In their chapter Virtual and Augmented Reality in Environmental Communication, Breves et al. [2021] provide a brief overview of XR use within the field and the psychological mechanisms that were explored. They concluded that although VR research on environmental attitudes and behaviors rests on well-established theoretical and methodical frameworks, empirical evidence of VR and AR's effectiveness on environmental attitudes and behaviors is scarce.
+Despite XR's promise and versatility, ambiguity remains on how these aspects and XR, in general, could benefit ES and elicit the necessary public engagement to combat environmental issues. Its potential adverse effects are also unknown; we must therefore understand existing areas and outcomes of research to create a future research agenda and identify promising avenues for further analysis.
+
+
+
+
+ 2.2 Sustainable HCI
+
+
+Human-computer interaction (HCI) is an essential consideration in using XR to achieve environmental sustainability objectives. The advancement and success of XR technology depend on the technology's design and user experience, regardless of context. While early bulky and less immersive displays contributed to a poor user experience and were therefore met with lackluster demand, advancements in display technology and an increased focus on HCI design for XR has improved XR technology [10,119]. Similarly, HCI is crucial not only for enhancing the viability of XR use to meet ES objectives, but also for all technological development. Sustainable HCI (SHCI) has emerged as a subfield focused on how technology can address sustainability challenges [16,59]. Two prevalent themes among SHCI's research have been the environmental and societal aspects of sustainability, such as reducing environmental impact and decreasing the depletion of natural resources [59], and the societal dimension of sustainability (including but not limited to social, political, and economic concerns) [140]. Looking at SHCI's contributions in the context of the United Nations’ Sustainability Development Goals (SDG) [163] highlights these two foci. In a review of SHCI research published between 2010 and 2019, Hansson et al. [59] discovered that much of the published literature could be mapped to the SDG 12, "Responsible Consumption and Production." Some literature could be mapped to SDG2, “Zero hunger”; SDG 7, “Affordable and Clean Energy”; SDG 9, “Industry, Innovation and Infrastructure; SDG 11 “Sustainable Cities and Communities”; and SDG 13 “Climate Action”; but a few papers did not fit properly into any existing SDG [59]. As the SHCI community engages with speculative and critical design [89,150], it generates research that may not easily align with a specific SDG because it reflects and critiques the field's current research practices [16,59].
+Although ES has focused on how to influence individual behavior [52,53,56], SHCI has criticized the efficacy of such approaches and called for a shift away from them [16,75]. A major concern is a limited reduction in unsustainable behavior with previous approaches, as well as the absence of empirical evidence of long-term change [62]. Although individual change should not be the sole focus of SHCI, moving away from it ignores those in environmental psychology and environmental communication who argue its necessity. Focusing on the individual is important for the larger goal of achieving sustainable change, as individual behavior can be directly influential in creating a sustainable culture and environment [23,80,154]. However, individuals with the ability to influence change are frequently removed from issues affecting our environment [17, 80] and society. XR could be a viable option for SHCI to reach these individuals by bridging that distance as seen in studies such as those investigating VR's effect on human rights attitudes [20] or helpful behavior toward others [3]. Through affecting individuals' attitudes and behavior, research such as the aforementioned highlight XR's potential to have the wider societal impact that SHCI is seeking while still focusing on the influence an individual can have. This paper aims to provide SHCI researchers with a reexamination of how their research could engage with sustainable consumption and behavior change, particularly as it relates to XR technologies. We thereby hope to direct researchers in this field toward fruitful research avenues involving environmental sustainability.
+
+
+
+
+
+ 3 METHODS
+
+
+This systematic literature review synthesizes existing information and reveals trends in applying state-of-the-art XR technology to environmental subjects. Its methodology includes searches of existing literature, study screening, and data extraction of components and approaches. Following the guidelines outlined in the PRISMA 2020 statement [115], a review was conducted to map the existing methods and strategies for developing applications related to climate and nature. A similar approach was applied to map out each study's methodology, measurements, and reported outcomes to better understand areas where certain aspects, such as interaction or role-taking within XR applications, show promise or require more research. To provide a broad yet focused analysis of current AR and VR uses within the environmental field, this study focused on literature engaging environmental topics. The research impact of the applications will not be covered within this review but has been analyzed in a previous survey by Rambach et al. [2021] within the areas of nature, preservation, and resource efficiency.
+
+
+
+ 3.1 Planning and Search Strategy
+
+
+The literature search was conducted through the Scopus database, which offers a wider range of journals than other databases. We performed multiple searches using different keywords to ensure that the results fit thematically with our research questions and to reduce false positives. Our final search string covered the variety of XR technology and associated names in addition to keywords related to climate and nature. Furthermore, we limited results to articles, conference papers, and book chapters. The final database search was conducted on 17 February 2022 with the following search string:
+“VR” OR “virtual real*” OR “XR” OR “AR” OR “augment* real*” OR “extend* real*” OR “MR” OR “mix* real*” OR “IVE” OR “immers* virtual environment*”)
+AND (“climate change*” OR “global warming” OR pro-environmental OR ecology* OR greenhouse OR recycle* OR “extreme weather” OR “environmental”))
+AND (LIMIT-TO (DOCTYPE, “ar”) OR LIMIT-TO (DOCTYPE, “cp”) OR LIMIT-TO (DOCTYPE, “ch”)
+
+
+
+
+ 3.2 Selection
+
+
+The Scopus database search delivered 1,736 hits, which were downloaded and compiled into a single Excel sheet for analysis. From the Excel sheet, the articles were selected in three phases against the following inclusion criteria: 
+
+The paper involves the use of XR (VR, AR) techniques.
+The paper focuses on nature or environmental science (climatology, conservation, oceanography, ecology, etc.).
+The paper is written in English.
+
+
+After the papers were screened for the above in the initial two phases, a fourth criterion was implemented to better align the results with the research questions. 
+
+The paper discusses either a study or the development of an XR application.
+
+
+The first author of this paper conducted all three phases of the selection process, beginning with reviewing the title and abstract of the articles against the above criteria. Given that the search results included papers published before there was a structured view of what qualifies as XR and there is still some debate on its definitions, for this screening, the following criteria were used in defining VR and AR: 
+
+VR – Encompasses any project using a Head Mounted Display (HMD) or Cave Automatic Virtual Environment (CAVE) system that replaces the physical environment.
+AR – Applications that add or extend the reality of a user by superimposing computer-generated graphics on the real world through a device (smartphones, Hololens, etc.).
+
+
+Articles whose title and abstract did not fulfill the inclusion criteria were marked and excluded, resulting in 1,343 exclusions. The retained papers were read in full and reviewed once again against the inclusion criteria. Where the papers were unavailable for download, the authors were contacted by email or academic social networks such as ResearchGate to request a full version; 26 articles remained unavailable and were excluded. A total of 274 articles were excluded, of which 5 were not written in English; the final 243 exclusions were not within the scope of the review.
+Initially, this phase was intended to conclude the screening process, and the remaining 108 samples would have been classified and coded for analysis. However, reviewers found some papers met the inclusion criteria but were irrelevant to the review's scope and research questions. These papers focused on technical aspects such as foliage modeling techniques; consequently, a new fourth criterion required papers to concern an application aimed at user interaction or to contain empirical research. Through the literature references, however, four additional relevant articles were identified, bringing the total to 112. After applying the new criteria, 32 more papers were eliminated, leaving 80 papers for analysis. Figure 1 depicts the selection/exclusion procedure.
+
+
+A diagram that details the steps of identifying, screening, and selecting the papers which were included in the literature review. The diagram provides the number of papers included and excluded in each step.
+
+Figure 1
+PRISMA flowchart [115] of the systematic review process from identification to the final sample of included papers
+
+
+
+
+
+
+ 3.3 Analysis
+
+
+The data extraction process aims to identify features of interest in the articles to answer the research questions. While the units of analysis were predetermined, some specific values were discovered during data extraction. The remaining 80 papers were downloaded and imported into ATLAS.ti. where data such as XR technology used, domain, and methodology (see Table 1) were extracted and coded following PRISMA's protocols for data collection and management [142]. The coding process was performed by the first author, with the second author overseeing the process through discussion meetings and reviewing the ATLAS.ti file at different stages of the process.
+
+
+Table 1
+Data extracted from papers
+
+
+
+
+Data
+Description
+
+
+
+
+Publication Venue
+Type of venue (journal article, conference paper, etc.) and name of the publication (title of journal, conference, etc.)
+
+
+Publication Year
+The year the paper was first published
+
+
+Knowledge Type
+Empirical, Theoretical, or Design
+
+
+Paper Type
+Whether the paper discusses the development of an application or study
+
+
+Research Method
+Qualitative or Quantitative
+
+
+Domain Area
+The domain area of the application or study
+
+
+XR technology
+XR type (VR, AR) and technology used (HMD, mobile phone, etc.)
+
+
+Application features
+Elements found within the developed applications or ones used for studies (game elements, immersive elements, interaction types.)
+
+
+Effect of XR
+Reported outcomes of studies
+
+
+Study Participants
+Age and occupation
+
+
+
+
+In March 2022, the first author generated initial code sets based on the research questions (e.g., Type of XR: VR/AR, Type of Knowledge: Empirical, Theoretical), that were used to code all papers. Coding began with ATLAS.ti automatically creating groups based on the publication venue and year using Scopus's bibliographic metadata, which the first author then double-checked. For the remainder of the initial code sets, codes were inputted into ATLAS.ti's machine learning Search & Code function, which searched all articles for initial keywords such as VR or AR and highlighted the relevant paragraphs for easy identification. The first author then reviewed the results to ensure the highlighted section was pertinent and applied the relevant codes. This process was used to identify references to domain areas, XR technology used, application features, and study participants. This was followed up by an inductive coding process where the first author read through all the articles and coded any concepts related to the initial code sets. During the initial phase of coding, new codes were generated when they contributed to a more detailed and informative categorization and knowledge extraction (VR: Active, VR: 360-degree video, Decision Making, Crowdsourcing). Following the initial round of coding, a discussion session with the second author was held to analyze the existing code book and determine its contribution to the research objectives, as well as to determine whether any additional codes should be incorporated. As a result, additional codes for the research methodologies (type of qualitative research and distinction in non-empirical publications) and reported outcomes of studies (associated effects between measured outcome variables) were generated. The first author then recoded the papers with the final codes. Coding was completed in May 2022, with a final discussion between the first and second authors after coding all papers. At completion, all authors joined a data session, during which the extracted data was reviewed, and the first author merged similar codes into categories to create a concise summary of the extracted data. A full list and descriptions of this data are shown in Table 1.
+
+
+
+
+
+ 4 RESULTS
+
+
+We present the results of our analyses in this section, beginning with identification and bibliographic data. There follow three sections that address our research questions: Domains (RQ1) and XR technology used (RQ2); Application Features (RQ3); and Outcomes of studies (RQ4).
+
+
+
+ 4.1 Identification and Bibliographic Data
+
+
+We reviewed and analyzed 80 scientific outputs: 40 conference articles, 39 journal articles, and 1 book chapter (see Table 2) published between 1996 and 2021. Figure 2 shows that the use of VR technology in climate and nature topics is a relatively new topic of interest, with over half of the papers published after 2018 and increasing rapidly each subsequent year. This could in part result from the increased availability of VR headsets in 2016, followed by technological improvements and a growing variety and price range in commercially available headsets. Conversely, the annual number of articles referencing AR technology has only fluctuated slightly since 2010. Many of the pre-2018 analyzed papers focused on AR technology, with VR becoming the focus thereafter.
+
+
+Table 2
+Publication venues
+
+
+
+
+Publication Venue
+Frequency
+%
+
+
+
+
+Conference
+40
+50
+
+
+Journal
+39
+49
+
+
+Book chapter
+1
+1
+
+
+Total
+80
+
+
+
+
+
+
+
+Line graph showing the number of papers published from 0 to 22 on the y-axis against the years 1996 to 2021. Two lines are shown, one for VR and one for AR.
+
+Figure 2
+Publication year of papers
+
+
+Almost half of the published papers (n = 36) were nonempirical, with the majority solely discussing design and development of an AR or VR application (Table 3). Articles categorized as nonempirical lacked mention of user studies. Two articles suggested that they might have conducted user studies, but the outcomes could not be ascertained [15] or measured only teachers’ willingness to use the application [144]. Other nonempirical papers discussed theoretical approaches for XR in an environmental context, and one discussed an AR art exhibition. Twenty-nine articles were categorized as empirical, reporting measured outcomes from qualitative or quantitative research using AR and VR applications. The remaining 19 papers discussed the entire design process of an application, from development to study outcomes. These have been labeled as mixed within the table, but will be considered empirical for the subsequent sections. Though there are more articles containing empirical research than not, the difference is not large (n=16).
+
+
+Table 3
+Types of full papers
+
+
+
+
+Knowledge Type
+Frequency
+Frequency
+%
+%
+
+
+
+
+Empirical
+29
+
+36
+
+
+
+Non-Empirical
+32
+
+40
+
+
+
+Theoretical
+
+3
+
+4
+
+
+Design (appdevelopment)
+
+29
+
+34
+
+
+Mixed
+19
+
+24
+
+
+
+Total
+80
+
+
+
+
+
+
+
+
+
+
+
+ 4.2 Domains (RQ1) and XR technology used (RQ2)
+
+
+To better understand XR technology's use in environmental topics, we analyzed each paper's domains to establish why XR was being used and its environmental subject. We also analyzed the XR technology type (AR or VR) and the study participants’ age and occupation or the application's intended audience.
+
+4.2.1 Domains (RQ1). Table 4 outlines the domains of empirical and non-empirical papers concerning the purpose of the AR or VR application. Some articles had overlapping domains, but we assigned papers to one domain that matched the prominent context for which XR technology was being used.
+
+
+Table 4
+Domains in empirical and non-empirical papers
+
+
+
+
+Domain
+Empirical papers
+Total %
+Non-Empirical papers
+Total %
+
+
+
+
+Education/Learning
+[4,11,24,25,31,43,45,48,73,76,84,91,95,98,113,114,121,123,133,157,159,160,167,171]
+24 (51%)
+[15,26,33,54,60,68,69,77,79,104,113,135,144,151,164,168,170,172,174,176]
+20 (62%)
+
+
+Crowdsourcing(Includes information gathering and citizen science)
+[35,81]
+2 (5%)
+[5,169]
+2 (6%)
+
+
+Environmental/ecological behavior
+[1,18,29,38,40,67,105,109,124,127,155,162,166]
+13 (30%)
+[126,165]
+2 (6%)
+
+
+Decision Making
+[22]
+1 (2%)
+[90,177]
+2 (6%)
+
+
+Environmental awareness
+[70,87,108]
+3 (5%)
+[51,122,143]
+3 (9%)
+
+
+Connection with nature
+[2,19,47,136]
+4 (9%)
+[39,156]
+2 (6%)
+
+
+Training
+[42]
+1 (2%)
+[63]
+1 (3%)
+
+
+Total
+
+48
+
+32
+
+
+
+
+Analysis revealed a heavy focus on education and learning within empirical research, with 51% of the articles using AR or VR this way. Some applications were developed for classroom use [113,123,157]; others were intended as an educational tool for the public [11,43]. The second largest domain (30%) was environmental/ecological behavior and the effects that XR could have on it. The articles studied participants’ sustainable behavior, such as plastic consumption [29,155], charity donations [40], and behavioral intentions [1,109]. This focus is followed by the domains of connection with nature (9%) and environmental awareness (5%). Connection with nature emphasized participants’ emotional or physical sense of connection with nature. Environmental awareness differs from the education/learning domain in that these articles focused on specific issues such as the impact of climate change on a forest [70] whereas the education/learning domain concerned broader topics, such as climate change generally [11].
+Paralleling the empirical papers, 62% of the nonempirical papers fall under the domain of education and learning. However, nonempirical papers showed less focus on behavior, with the second largest domain being environmental awareness. Furthermore, the gap between the largest and second-largest domain is significant, with only 9% of the papers in the environmental awareness domain. The remaining domains of crowdsourcing, decision-making, and environmental/ecological behavior each made up 6% of the empirical papers, with training being 3%.
+As discussed above, information is not the sole obstacle preventing the public from altering their behavior around environmental issues. The heavy focus on education might indicate that even research using novel technologies such as extended reality does not engage with forward-thinking practices to mitigate environmental issues on the individual level.
+To provide a more insightful look into the environmental subject areas, environmental domains were coded according to branches of biology and other specific categories. Similar to Table 4, some articles overlapped with multiple domains but were labeled according to their main environmental focus. Among empirical papers, ecology (21%) and climatology (23%) have had a higher focus compared to the other domains (see Table 5). Among the climatology papers, climate change and potential future consequences were the focus of most of the papers. Papers within the ecology domain mainly discussed ecosystems, the importance of preserving them, and species composition and diversity in certain ecosystems. Entomology (12%) was the third leading environmental domain; interestingly, butterflies were the focus of 4 of the 6 entomology papers [25,91,157,158], however, two of these [157,158] were about the same project, but at different stages of development. Conservation and zoology individually made up 10% of the articles, closely followed by oceanography (8%).
+
+
+Table 5
+Environmental domains in empirical and non-empirical papers
+
+
+
+
+Environmental Domain
+Empirical papers
+Total %
+Non-Empirical papers
+Total %
+
+
+
+
+Botany
+[47]
+1 (2%)
+
+
+
+
+Climatology
+[11,70,73,87,108,109,121,123,136,155,162]
+11 (23%)
+[69,77,122,144,165]
+5 (16%)
+
+
+Conservation
+[1,40,67,105,124]
+5 (10%)
+[33,143]
+2 (6%)
+
+
+Ecology
+[24,31,38,81,84,86,95,113,159,167]
+10 (21%)
+[5,26,60,63,79,90,104,151,156,164,170,173,174,176]
+14 (44%)
+
+
+Entomology
+[19,25,35,91,157,158]
+6 (12%)
+
+
+
+
+Forest science
+[18]
+1 (2%)
+[42,169]
+2 (6%)
+
+
+Geography
+
+
+[68]
+1 (3%)
+
+
+Geology
+
+
+[54]
+1 (3%)
+
+
+Herpetology
+[114]
+1 (2%)
+
+
+
+
+Hydrology
+[76]
+1 (2%)
+[177]
+1 (3%)
+
+
+Natural History
+
+
+[24]
+1 (3%)
+
+
+Nuclear Power
+[133]
+1 (2%)
+
+
+
+
+Oceanography
+[22,43,98,127]
+4 (8%)
+[51]
+1 (3%)
+
+
+Sustainability
+[29,166]
+2 (4%)
+[126,135]
+2 (6%)
+
+
+Zoology
+[2,4,45,48,171]
+5 (10%)
+[15,39]
+2 (6%)
+
+
+Total
+
+48
+
+32
+
+
+
+
+Ecology was the leading domain among non-empirical papers, with 44% of them covering ecological topics, mostly focusing on specific ecosystems or the role an organism plays within its ecosystem. Compared to the empirical papers, climatology did not have as high a focus in non-empirical papers though it still was the second leading domain with 16%. Other environmental domains had significantly less focus with only one or two papers falling within their focus. Entomology, which was the third leading domain among empirical papers, contained no papers among the non-empirical articles. Among both categories of papers, ecology and climate change were the leading domains, however, this could be due to the keywords included within the search string used in Scopus. Including the words ecology, climate change, and global warming could have possibly skewed the results in this direction; then again, it is also possible that these two domains had a heavier focus given the increased interest in these topics in the media and politics over the last four to seven years [100,179].
+
+
+4.2.2 XR technology used and user demographic (RQ2). Of the 80 articles, 68% referenced a VR application, all but three using either a head-mounted display or CAVE system (Table 6). 33% of papers referred to using AR through mobile phones/tablets, Hololens, or computer cameras. Given the variability in VR user experience, we divided VR applications based on whether the application contained interactive elements (Active) or instead offered a 360° video or photographic environment with minimal interactivity (360° video). Of the 54 articles referencing VR, 42% fell into the Active category and 23% into the 360° video category. (We could not determine interaction level in the remaining three papers.) Although both empirical and nonempirical papers featured VR applications, the noninteractive type (360° video) was more common in empirical literature, though the difference was minimal (n=2). In contrast, most of the non-empirical papers mentioned other VR methods of interaction; only 2 provided an exclusively visual experience.
+
+
+Table 6
+Types of XR technology used
+
+
+
+
+XR Type
+Empirical papers
+Empirical papers
+Total %
+Total %
+Non-empirical papers
+Non-empirical papers
+Total %
+Total %
+Total
+
+
+
+
+AR
+[25,40,76,81,87,91,95,136,157,158,162,166,167,171]
+
+14 (29%)
+
+[5,26,60,63,77,79,135,144,151,169,174,176]
+
+12 (37%)
+
+26 (33%)
+
+
+VR
+
+
+34 (71%)
+
+
+
+20 (63%)
+
+54 (68%)
+
+
+360 ° video
+
+[11,18,19,22,35,38,45,47,48,67,105,108,109,113,121,133]
+
+16 (33 %)
+
+[51,54]
+
+2 (9%)
+18 (23)
+
+
+Active
+
+[1,2,4,24,29,43,70,73,98,114,123,124,127,155,159]
+
+15 (31 %)
+
+[15,33,39,42,60,68,69,90,104,122,126,143,156,164,165,170,173,177]
+
+18 (53%)
+33 (42%)
+
+
+Unknown a
+
+[31,84,86]
+
+3 (8%)
+
+
+
+
+3 (4%)
+
+
+Total
+
+
+48
+
+
+
+32
+
+80
+
+
+
+
+a Some papers did not contain enough detail to infer whether the VR application used contained interaction or was just a 360 video.
+             
+
+
+
+
+Table 7 shows that 60% of documented participants in empirical studies were adults. Of these, 34% identified themselves as university students which could be due to them being more accessible to university researchers (see Table 8). Studies involving non-student adults focused on either the local citizens of an area (14%) or academics/educators performing research or teaching courses (12%). 36% of participants were under the age of 18; studies including youth were testing XR applications aimed at K-12 students (29%).
+
+
+Table 7
+Study participants and target audience's age
+
+
+
+
+Age
+Empirical papersFrequency
+%
+Non-Empirical papers Frequency
+%
+
+
+
+
+Minor
+18
+36 %
+6
+18 %
+
+
+Adult
+30
+60 %
+3
+9 %
+
+
+Unknown
+2
+4 %
+24
+73 %
+
+
+Total
+50
+
+33
+
+
+
+
+
+
+
+Table 8
+Study participants and occupation of the target audience
+
+
+
+
+Occupation
+Empirical papers
+%
+Non-Empirical papers
+Total %
+
+
+
+
+Academic/Educator
+7
+12 %
+6
+19 %
+
+
+City Planners/elected officials
+2
+3 %
+
+
+
+
+Local Citizens
+8
+14 %
+3
+9 %
+
+
+K-12 Students
+17
+29 %
+6
+19 %
+
+
+University Students
+20
+34 %
+1
+3 %
+
+
+Unreported
+4
+7 %
+16
+50 %
+
+
+Total
+58
+
+32
+
+
+
+
+
+Interestingly, AR studies mainly focused on primary-school students, whereas VR studies involved adults. This may be due to the cost and availability of VR headsets compared to a smartphone or tablet, or in some cases a computer and webcam. Given the emphasis on educational applications and the age of the participants, it is preferable, from a coordination standpoint, to conduct studies during school hours. VR headsets present several challenges in a school setting: only one student can use them at once, they require a safe area for use, and buying multiple headsets is expensive. In contrast, AR equipment is more affordable, and many students can use a single device simultaneously since the screen is easily viewable by multiple individuals. These factors could also explain the higher proportion of university students among adult participants, as universities offer the space and funding for VR research. 73% of the non-empirical articles did not specify a target audience for their application, possibly a result of developers focusing more on experimental concepts and design, resulting in a lack of emphasis on the area at the time of this review.
+
+
+
+
+
+ 4.3 Features present in the XR applications (RQ3)
+
+
+To answer our second research question regarding immersive and interaction approaches in the field, we analyzed references to game elements, immersive elements, and types of user interaction. Since AR and VR can offer distinct experiences, we studied them separately, with VR applications retaining the division between Active and 360° video (see Section 4.2.2). At the time of the analysis, only a handful of applications were available in a digital format, and a few of those had capability restrictions based on geographic location. It should also be mentioned that the virtual reality (VR) application Stanford OA Experience appeared in two empirical studies [43,127] and one non-empirical publication [122], however, each paper was counted independently when comparing the features of the applications.
+We identified 31 unique features (see Table 9) that were subsequently divided into three categories: game elements, immersive elements, and interaction types. Game elements were the largest category, with 15 different attributes identified within the literature. In total, 11 interactive elements were identified, although head movement was counted as its own category given its automatic presence when using VR technology. We did not include walking, as its inclusion was difficult to determine from the literature, and with VR it is restricted by the limits of the play or testing area. For immersive elements, we identified 5 separate features.
+
+
+Table 9
+Features explored within AR and VR
+
+
+
+
+Features
+AR
+VR-360° video
+VR- Active VR
+Total %
+
+
+
+
+Game elements
+[95,135,136,160,166, 167,169,171]
+[113]
+[15,39,98,114,123,124,173]
+16 (20%)
+
+
+AI (ArtificialIntelligence)
+
+
+[15]
+1 (1%)
+
+
+Collection
+[160,166]
+
+[15,98,114,123,124,173]
+8 (10%)
+
+
+Customization
+[136]
+
+
+1 (1%)
+
+
+Death/Survival
+[160]
+
+[114]
+2 (2%)
+
+
+Levels
+
+
+[15]
+1 (1%)
+
+
+Matching
+[95]
+
+
+1 (1%)
+
+
+Minigames
+[166]
+
+
+1 (1%)
+
+
+Missions
+[136,166,171]
+[113]
+[114,123]
+6 (7%)
+
+
+Multiplayer
+[135]
+
+[15,39,173]
+4 (5%)
+
+
+Need Meter
+
+
+[15,114]
+2 (2%)
+
+
+Resource Management
+[135,167]
+
+
+2 (2%)
+
+
+Rewards
+[136,166,167]
+
+
+3 (4%)
+
+
+Social media sharing
+[136,169]
+
+
+2 (2.5%)
+
+
+Turns
+[135,167]
+
+
+2 (2%)
+
+
+Immersive
+[4,95,135,136,160, 162,166,171]
+[105,121,133]
+[2,15,29,43,73,98,114, 123,124,126,165,173]
+23 (29%)
+
+
+Avatar
+[136,166]
+
+[2,15,39,73,114,123,173]
+9 (11%)
+
+
+Narrative
+[4,95,166,171]
+[105,121]
+[43,98,123,124,126,165]
+12 (15%)
+
+
+Roleplay
+[25,135,160,166]
+
+[98,114,122,123,124,165]
+10 (12%)
+
+
+Soundscape
+[162]
+
+
+1 (1%)
+
+
+Voice narration
+
+[133]
+[29,122,124,126]
+5 (6%)
+
+
+Interactive
+[5,26,60,81,135,162, 166,171,176]
+
+[1,2,15,28,29,33,39,42, 43,60,69,73,98,114,122,123, 126,127,155,156,165,173]
+32 (40%)
+
+
+Data-gathering
+[81]
+
+[15,43,73,127]
+5 (6%)
+
+
+Free exploration
+[60,162,166,176]
+
+[15,60,69,73,98,114, 122,126,155,156,165]
+15 (19%)
+
+
+Grabbing
+
+
+[98,123,124,173]
+4 (5%)
+
+
+Guided Exploration
+[5,26]
+
+[4,123,126,156]
+6 (7%)
+
+
+Haptic feedback
+
+
+[1,2,98]
+3 (4%)
+
+
+Multiuser interaction
+[135]
+
+[39,73]
+3 (4%)
+
+
+Perspective change
+
+
+[69,114]
+2 (2%)
+
+
+Sawing
+
+
+[1]
+1 (1%)
+
+
+Searching
+[171]
+
+
+1 (1%)
+
+
+Selection
+[60,176]
+
+[15,33,42,60,69,73, 122,126,165]
+11 (14%)
+
+
+Tapping
+[162,166]
+
+
+2 (2%)
+
+
+Head movement
+
+[11,18,19,22,35,38, 45,48,51,54,67,90, 105,108,109,113, 121,133]
+[1,2,4,15,24,29,33,39,42, 43,60,69,70,73,90,98,104, 114,122,123,124,126,127 ,155,156,164,165,170, 173]
+48 (60%)
+
+
+
+
+As shown in Table 9, head movement was present in 60% of the applications; however, as highlighted in Section 4.2.1, VR technology was the most used. 39% of the XR applications referenced the use of at least one interactive element. The user's ability to freely explore the AR or VR environment was the most prominent interactive affordance, found in 19% of applications. Selection was the second most widely used interaction type, with 14% of users selecting elements within the environment with a controller, mouse, finger, or gaze.
+Beyond the automatic immersive nature of VR and AR, 29% of applications contained at least one other immersive element. Immersive elements were more common among VR applications, making up 69% of the total. 14% of applications contained a narrative for users to follow, 12% contained role-playing elements, while 11% provided an avatar for users to embody or interact with. The VR application Virtual Climate scientist [123] and PEAR [166] were the only applications with all three elements.
+20% of the XR applications contained at least one game element, with collection (10%) and missions (7%) implemented the most. Game elements were more varied among AR applications, with PEAR [166] (n=4), eVision [136] (n=4), and Sustain [135] (n=3) providing the widest diversity. Of the VR applications, the Rhine Riverbed exploration [15] had not only the largest variety of game elements (n=5) but also the broadest exploration of available features among all the applications (n=11). PEAR [166] had the second highest amount with 9; while a VR ecological environment for learning about the Taipei Tree Frog [114] was third with 8.
+Although we examined these application features individually some applications use the features in conjunction with one another for a specific purpose, usually for learning and understanding a subject (i.e., sustainability, ecology, etc.). For example, in PEAR [166] users collected digital trash that appeared on the application map during real-world exploration of Singapore and were rewarded with biofuel tokens. Later, these tokens allowed access to minigames in which they helped a robot avatar resolve environmental problems. The features work together to boost awareness of sustainability and climate change and demonstrate interactively how players can address these challenges in the real world.
+Some papers described features to achieve goals other than learning. The three papers that used haptic feedback did so to increase participants’ embodiment within the VR environment [1,2,98]. Sustain [135] uses its features to increase user awareness of immediate and long-term consequences of policymakers’ decisions. The main goal of its multiplayer aspects and varying roles is to aid in raising awareness, but its authors also mention implementing them to add replayability. The VR application JEL [39] uses its features to establish connection between users and nature. It should be noted, the inclusion/implementation of many of the described features is not discussed in the literature. Considering this, despite the variety of features present in XR applications described in the literature, the rationale for their use cannot be determined with certainty.
+
+
+
+
+ 4.4 Researched effects of XR use and associated effects between measured outcomes (RQ4)
+
+
+Our third question relates to the use of XR technology in environmental subjects. To address the research question, we analyzed the literature to identify the type of empirical research, what was being measured and outcomes, and any noted associated effects between them.
+
+4.4.1 Methods and data. Table 10 shows that empirical papers frequently used quantitative methods (48%) with qualitative papers (24%) in the minority. 28% of the empirical papers used mixed methods, combining quantitative and qualitative approaches. We further categorized quantitative analysis methods as either descriptive or inferential. A slight majority was inferential, though the difference was minimal (n=2). Questionnaires were the preferred method of data measurement, with only 11 studies specifying other methods such as interviews [25,29,127], observation [25,38,47,81,91,95], or recorded audio/oral presentation from participants [1,73,121].
+
+
+Table 10
+Type of empirical research
+
+
+
+
+Empirical Type
+Frequency
+Frequency
+%
+%
+
+
+
+
+Quantitative
+20
+
+42
+
+
+
+descriptive
+
+9
+
+19
+
+
+inferential
+
+11
+
+23
+
+
+Qualitative
+11
+
+23
+
+
+
+Mixed
+12
+
+25
+
+
+
+Unknown
+5
+
+10
+
+
+
+Total
+48
+
+
+
+
+
+
+
+
+
+4.4.2 Measured outcome variables in literature and associated effects. Similar themes emerged among the measured outcome variables in the empirical studies, but there was a lack of consistency in the context of how they were analyzed. Analyzing the effectiveness of XR technology on learning and knowledge retention was a recurring theme; however, other topics, such as self-efficacy, were analyzed in a variety of contexts. One study examined how a user's self-efficacy influenced their engagement in learning and exploring a VR environment [109], while others examined how AR or VR affected the user's self-efficacy [76,121,155].
+Moreover, despite employing similar technologies, the studies’ applications had distinct approaches and features. Consequently, it is difficult to identify and document patterns among the outcome variables with certainty, as there is considerable variation between the contexts of the measurements. Nonetheless, the variables measured by each study were coded and are depicted in Figure 3.
+
+
+ar graph with measured variable outcomes on the y-axis separated into three groups: VR: 360 video, VR: Active VR, and AR. Measured results were Emotion, Immersion/embodiment, self-efficacy, environmental inclination/behavior, learning/knowledge, social dimension, spatial dimension, temporal distance, and user experience. The x-axis shows the percentage frequency of measurement for the outcome variables ranging from 0 to 20%.
+
+Figure 3
+Frequency of measured outcome variables among 48 empirical papers
+
+
+Figure 3 and Table 11 reveal a significant focus on measuring learning and knowledge acquisition among all three XR types, which coincides with the high instances of papers within the education/learning domain. Aside from measuring whether participants could recall facts about the subject, three 360° videos [11,84,113] and one Active VR application [159] also measured whether VR could improve participants' cognitive elaboration or critical thinking skills. One study noted that a participant's mindfulness could affect learning using VR: 360° video [133] (see Figure 4). Another study that used an Active VR application focused on how immersion could influence learning about ocean acidification, noting that participants who explored and interacted with the environment showed greater change in learning between pre- and post-test scores, with knowledge gains lasting several weeks [98].
+
+
+Table 11
+XR technology frequency among measured outcome variables
+
+
+
+
+Measured outcome Variables
+VR:360 Video
+VR:Active VR
+AR
+Total
+
+
+
+
+Emotion
+44%
+44%
+11%
+9
+
+
+Immersion / Embodiment
+58%
+42%
+
+12
+
+
+Self-Efficacy
+25%
+25%
+50%
+4
+
+
+Environmental Inclination / Behavior
+53%
+32%
+16%
+19
+
+
+Learning / Knowledge
+32%
+26%
+42%
+19
+
+
+Social Dimension
+33%
+67%
+
+3
+
+
+Spatial Dimension
+
+100%
+
+1
+
+
+Temporal Distance
+50%
+50%
+
+2
+
+
+User Experience
+50%
+50%
+
+4
+
+
+
+
+
+
+Directional network graph with 24 circles each representing a variable (Nature in Self, Body Transfer, Embodiment, Locus of Control, Environmental Behavior, Interest, Fear Arousal, Self-Efficacy, Engagement, Entertainment, Behavioral Intentions, Interaction, Spatial Presence, Perceived severity, Temporal Distance, Vividness, Learning/Knowledge, Mindfulness, Immersiveness, Subject size, Previous knowledge/interest, Cognitive Elaboration, CTE, NfA). Arrows connect variables to indicate noted associated effects one variable has on the other.
+
+Figure 4
+Associated effects explored in 13 empirical papers (colors related to Figure 3)
+
+
+Participants’ environmental inclination and behavior was of interest to many of the studies, with a higher focus on VR conditions. Some studies measured environmental inclination as a pre-test condition to gauge its influence on outcomes [18,67,166], whereas others measured it as a post-test condition to identify changes resulting from the XR intervention [1,2,18,38,105]. Researchers were interested in participants' attitudes toward the environment, feelings of nature within self or connectedness to nature, awareness of environmental issues, and environmental behaviors. Though most studies focused on how XR applications influenced these factors, one [18] explored how a participant's existing need for affect (NfA) and sense of immersion affected their ability to be influenced by the VR intervention to elicit commitment to the environment (CTE). Although immersion appeared to have a positive influence on CTE, researchers noted that the VR intervention only affected participants who initially reported low or average NfA. A possible reason for this is proposed by Ahn et al., who suggest that sensory-rich experiences such as those in VR provide greater assistance to individuals presenting lower trait abilities (e.g., the ability to consider and experience another's perspective) [3].
+As observed in Figures 3 and 4, immersiveness and embodiment attracted significant attention in VR studies, with spatial presence and immersiveness having the highest number of identified influences. In addition to investigating the influence immersion has on learning, cognitive elaboration, and CTE, two studies [18,45] were interested in its effect on participants' perceived spatial presence within the VR environment. Other elements that were investigated to potentially influence spatial presence were embodiment [2], interaction [108], and vividness of the environment [29]. A 2021 study utilizing 360° video in VR [19] investigated how spatial presence affected participants' perceived temporal distance from environmental issues, its perceived severity, and their behavioral intentions after viewing the video.
+A few studies (n=7) focused on barriers to action and explored the self-efficacy of users, locus of control, or psychological distance. Self-efficacy was the most studied (n=4), with one study measuring its effect on the success of a 360° video VR intervention [109] and three measuring how XR influenced users' feelings of self-efficacy [76,121,155]. Two studies measured users’ perceived locus of control over the environment; both reported users feeling a higher sense of control after engaging with the VR application [1,155] with Ahn et. al. noting that the increase in the locus of control leads to greater environmental behavior compared to traditional media [1]. Finally, two studies investigated VR's effect on users’ perceived psychological distance, one using a 360° video [19] and the other an Active VR experience (Stanford University VR Ocean acidification experience) [127]. Both noted an increase in either the psychological closeness [19] or personal relevance [127] users felt after using the VR application. Though these results suggest that VR could be beneficial in addressing self-efficacy, locus of control, or psychological distance, currently there is not enough evidence to conclude its effects on them with certainty.
+In the empirical research for all XR categories, learning/knowledge acquisition and environmental inclinations were measured the most. Yet only 13 of the 48 empirical papers analyzed potential factors impacting specific measurements. 8 of these papers tested 360° video in VR, while the remaining 5 had VR applications with interaction beyond head movement. 14 papers contain comparative studies between XR and other media, nine of which used 360° video in VR [11,18,19,38,45,67,105,108,109] and with five including interactive elements in AR or VR [1,2,25,113,114,157,159]. Overall, these results suggest that although XR technology shows promise in education, it is unclear how this technology or specific elements can help engage and motivate behavior to address environmental issues.
+
+
+
+
+
+
+ 5 DISCUSSION AND FUTURE RESEARCH AGENDA
+
+
+
+
+
+ 5.1 Limitations of the paper
+
+
+Before offering our recommendations for a future research agenda regarding the use of XR in ES, we would first like to explain some of the limitations of our systematic literature review. SCOPUS was used to conduct the initial literature search as it indexes over 7000 publishers, including all major technology-related libraries (ACM, IEEE, Springer, etc.) [180]. Despite this breadth, using one database may have omitted some relevant literature. Furthermore, our keywords may have skewed our search results, leading to the high prevalence of ecology-focused articles. Although we aimed for clear criteria for including articles, there is still debate regarding definitions of AR and VR; we defined both and tried to adhere to our guideline through the selection process. In some VR articles, however, it was difficult to determine whether they were using an HMD or CAVE system. We retained these articles, as they still seemed to represent a trending path in the field. XR research is heterogeneous, with much work outside the scope of this review; although such work could provide valuable insights into XR in general and how it could benefit the field of environmental sustainability. However, as interdisciplinary research is not always conducted, we wished to gain a better understanding of where the field of environmental sustainability stood concerning XR research. We strove to diminish another limitation—involuntary errors, especially in coding—by using software features such as the ATLAS.ti search and code; however, some errors are still possible.
+
+
+
+
+ 5.2 Identifying research gaps from literature review results
+
+
+Environmental sustainability faces many challenges in engaging the public with environmental issues, which XR could possibly aid in. XR technology has the potential to bridge the gap between individuals and environmental issues, provide an immersive experience for learning about those issues [107,120], increase users' self-efficacy [46,146], and ultimately modify behavior [3] in order to promote sustainable living. Through a systematic review of 80 articles discussing XR technology in environmental sustainability, we aimed to provide an analysis of how the technology has been used in the field thus far and to identify potential knowledge gaps that future research could address. We addressed the following research questions:
+
+
+RQ1 In which contexts has XR been used to engage with environmental topics?
+
+
+RQ2 What XR technology was used in the field of ES and who was the intended demographic for these XR interventions in ES?
+
+
+RQ3 What engagement and interaction methods have been explored between XR technology and environmental topics?
+
+
+RQ4 What has been studied on the effects of XR use for environmental topics?
+
+Despite growing interest in using XR in ES, our analysis indicates that there is still no clear understanding of how to best utilize the technology, specifically how it may be useful in addressing the barriers in engaging and influencing pro-environmental behavior (see section 2.1). Although some studies investigated behavior and connection with nature, most focused on learning and retention. Foundational theoretical work in ES has established probable uses of AR and VR, but we lack sufficient empirical evidence on the benefits of XR technologies for ES beyond learning, especially for AR [17]. Even research on the efficacy of XR technology in learning reflects knowledge gaps, as few studies have compared its performance to that of other educational media in ES. It is also unclear how AR and VR features could be utilized to achieve the various ES goals and overcome the obstacles that prevent the public from participating in environmental issues. Replicating a world using immersive technology is a difficult undertaking, but the literature reveals that many applications incorporated features without a clear objective. Even after quantitative examination, their utility for ES was unclear, beyond using XR as a potential learning aid. To address the limitations and knowledge gaps our analysis revealed, we propose the following thematic, theoretical, and methodological agendas to guide future research in ES.
+
+
+
+
+ 5.3 Thematic Agenda
+
+
+
+5.3.1 Widening the thematic research focus of future work in XR use for ES. To date, research on XR in ES has concentrated on harnessing XR technology as a teaching and learning aid (see 4.2). Yet research reveals that many barriers beyond a lack of information prevent people from engaging in environmental issues and adopting pro-environmental behavior [52,56,78,94]. Such barriers include lack of self-efficacy, locus of control, and psychological distance to environmental issues. As discussed in section 4.4.2, some articles reviewed here address self-efficacy [76,109,121,155], locus of control [1,155], psychological distance [19,127], and other factors; however, we can draw no clear conclusions yet on how using XR might influence these aspects for addressing ES on an individual level. Empirical research on AR's benefits beyond learning is minimal even outside environmental subjects [17]; meanwhile, VR research in other fields has highlighted its potential to generate empathy [9,139], influence cognition [14,66,132], and improve self-efficacy [46,146]. ES research using XR could harness these qualities to address the individual barriers discussed, although other technologies toward similar outcomes should also be considered. Focusing research on addressing individual barriers might appear to follow a pattern for which SHCI research has been criticized: trying to influence individual change despite minimal evidence of long-term success [62]. Yet, regardless of whether we focus on personal behavior change or broader policies, individuals will always be at the center of the issues, as will obstacles such as self-efficacy, locus of control [53], and psychological distance [23]. By expanding XR research in ES into these and other barriers to environmental engagement, ES and SHCI could develop better understanding of and methods for influencing change from households to individuals responsible for policy development. Therefore, future research on XR in ES should seek to expand the thematic focus further to pro-environmental behavior and connection with nature by exploring how XR can be used to increase individuals’ sense of self-efficacy and their perceived locus of control over environmental problems.
+
+
+5.3.2 Researching the benefits and diversifying the intended purpose of VR and AR features within the context of ES. The features that can be implemented within an XR application are extensive and continue to grow with the rapid development of both VR and AR technology. Given the extensive number of those available, it is vital to develop an understanding of how and why these features can help achieve different goals, such as behavioral change. As seen in section 4.3, XR offers a wide variety of immersive and interactive elements (e.g., haptic feedback, roleplay, avatars, etc.); in the literature, however, the rationale for using some features was unclear. 19% of the publications let users explore the XR environment, while 7% had guided exploration (see Table 9). However, the lack of explanation for selecting either of these alternatives suggests that they were implemented without an understanding of their benefit. The recent growth in ES literature on XR indicates the enthusiasm surrounding its possible applications (see Figure 2). Yet researchers must use such technologies and their features cautiously, given the impact of current XR hardware on energy consumption [85]. By deploying XR solutions without a true knowledge of why it and its features are used, "solutions" are created that fail to meet sustainability concerns and may even exacerbate the situation. This has been a worry for the field of SHCI in general, the notion that any technology may be used to solve the world's problems [16,150] rather than being skeptical of how and which solution we employ [13,118]. The current state of XR in ES seems to feed this negative trend in SHCI, but the situation can be improved with a better understanding of the technology. Therefore, future research in ES should strive for a better understanding of why certain features are being implemented. Some application features in the literature did have a clear intention, or the authors noted a possible outcome from using a specific affordance. Several of these features were employed in learning to stimulate interest [114,166], aid knowledge retention [73,98,173], or elicit diverse learning types [69]. However, the features used could affect measured outcomes (see 4.4.2) beyond their intended purpose and contribute to additional research, such as environmental engagement barriers. For example, some studies used VR to allow users to embody other living organisms and adopt other perspectives to facilitate users’ connectedness with nature [2] or aid learning [69,70,98,114]. These features, when combined with other interactive elements, may help users develop an emotional connection to nature or reduce their psychological distance from environmental issues. XR features may thus benefit ES beyond learning, but to fully understand how, we must expand their context and investigate their impact on measured outcomes. This, in turn, can benefit ES and other sectors by revealing when and how to deploy XR to create sustainable long-term solutions rather than more temporary ones. Therefore, future research should strive to diversify the intended purpose of implemented XR features and study the impact they have on measured outcome variables in the field of ES.
+
+
+
+
+
+ 5.4 Theoretical Agenda
+
+
+
+5.4.1 Understanding how users interact with XR technology within ES and applying it in areas it excels at. Figure 2 shows that using VR in ES is a newer research area; many are excited to explore and harness its potential. But as with any new technology, its rapid adoption leaves theoretical gaps related to XR technology's application and creates shortcomings, such as biases or misuse of technology. For example, past studies analyzing storytelling in VR highlighted how using 360° video in VR hinders users’ ability to focus and recall information because VR environments promote exploratory behavior [12,106]; users thus tend to explore the environment rather than focusing on narration or looking in the direction researchers want. Despite this, our results showed that 33% of VR empirical research in ES used 360° video (see 4.2.2). Furthermore, as shown in Table 11, 53% of studies that investigated users’ environmental inclination/behavior used 360° video, compared to 32% of studies with interactive elements allowing free exploration (see 4.4.2), even though VR is more successful in this context and with shorter verbal dialogue requiring less attention [12]. 31% of the empirical VR research analyzed did include interaction (see Table 6), with some harnessing its embodiment capabilities through haptic feedback [1,2,98], or explorative nature by testing movement within the environment [155]. Future research using XR in ES should continue to focus on interactive aspects, as these also play a role in another area XR where excels, creating a feedback loop between users’ actions and information received through participatory experiences [107,120]. Research in other fields has highlighted VR's potential as an “empathy machine,” in part because it allows users to embody other perspectives [20,139]. Just as future research in ES should focus on XR's known strengths, it should also consider its limitations and avoid using XR in a way that exacerbates them. As noted, users tend to want to explore VR environments and thus struggle to concentrate on long narration or specific areas for an extended period. The hardware's limitations, which cause visual fatigue for some, are another factor that hinders concentration [153]. Therefore, research using XR in ES should continue focusing on XR's known strengths (e.g., exploratory and participatory experiences) while avoiding its known limitations (e.g., difficulties concentrating) and striving to further understand how users interact with the technology.
+
+
+5.4.2 Understanding the role of user personalities and attributes in the effectiveness of XR interventions for ES. Future research should investigate how users interact with XR technology; however, user personalities or personal traits may also influence how users interact with XR and its impact in such domains as learning or behavior change. Though no studies in our analysis thoroughly addressed this area (see 4.4.2), a few suggested that AR and particularly VR interventions could be more beneficial among people with low trait abilities such as empathy, imagination, or compassion [2,18]. The immersive capabilities of VR can counterbalance these traits by having users embody other perspectives [3], it can also be an ideal intervention for people who avoid emotional situations [18] or considering environmental problems [17]. Given that personality and self-construal (independent or interdependent) potentially influence individuals’ pro-environmental behavior and attitudes [53], further research on VR and AR's effectiveness with specific traits or psychological dispositions would be valuable. Another aspect to consider is users’ proneness towards social desirability; although Chirico et al. noted that it only appeared to affect some attitudes [29], additional research exploring its influence on XR interventions would be beneficial. Finally, the effect of age on XR-related psychological outcomes is pertinent, since so many studies take place in classrooms. Previous research demonstrates that VR results with adult participants cannot necessarily be generalized to younger groups [21], prompting further investigation into the effects of age differences on the results in Section 4.4.2. Outside of ES, XR research has already noted that personality traits, such as introversion, can influence a user's sense of presence in a VR environment [7,152] or how they perceive it [141]. Gamification research has identified how traits can influence individuals’ reactions to different motivational affordances [74,116] which could also apply within an XR environment. If XR research were to elaborate on these findings and apply them inside ES, we might gain a better understanding of who can benefit from XR or how to tailor XR experiences to certain audiences (i.e., individuals with low trait abilities) or objectives (i.e., reducing psychological distance to climate change). Although these examples may not apply to all aspects of sustainability, research should still consider user personality and attributes when addressing sustainability, given their potential influence on pro-environmental behavior and concern [53]. This would aid in developing solutions that are effective in not only addressing specific themes such as climate action, but would also give insight into tailoring them to a given audience. Therefore, future research should strive to explore the impact users’ personalities, personal attributes, and age have on the efficacy of XR interventions in ES.
+
+
+5.4.3 Understanding the negative aspects and consequences of XR use for ES. Though many are eager to explore XR's capabilities, we must also consider negative impacts. As we note, the field lacks a clear understanding of how AR and VR can benefit environmental issues, in part because of minimal empirical evidence (see 4.3 and 4.4), but also because of a lack of understanding of its negative aspects and possible consequences. Previous research on immersion in VR has highlighted some side effects of using VR, such as motion sickness, headaches, and other physical symptoms [27,129]. Many of the VR studies we analyzed discussed cybersickness, with some mentioning measures to counteract it [15,18,19,22,24,60,113,114,126,155]. Knowing these side effects aids researchers in designing their experiments and allows them to take steps to limit them. However, AR and VR are still novel technologies and long-term ramifications of their use remain unknown. As with any other technology, there are possible ethical misuses of XR's features that we may not yet be aware of. By gaining a deeper understanding of these areas, future researchers can design experiments that prevent these undesirable elements. Others outside ES are already considering the ethical difficulties that may develop and the necessity for a VR ethical framework [83,97,99], which should be considered within ES if the field is to continue working towards influencing individuals’ pro-environmental behaviors and attitudes. Within the sustainable HCI community, speculative and critical design [41,88,89] have been used as tools to engage responsibly with far futures brought by novel technologies, such as XR [57], to better position the opportunities and pitfalls that can be created by those technologies. Understanding the long-term effects of XR use will take time and requires proper investigation, but ES research could similarly use speculative and critical design to initiate dialogue around potential consequences of long-term XR use and AR/VR's viability as a solution for ES. Furthermore, this could facilitate a better understanding of the potential ethical implications of its application, not only in ES, but also in other facets of sustainability such as economic and societal considerations. Researchers should be careful not to develop solutions that, in the long term, end up harming individuals they seek to engage in efforts to promote sustainability, as this could defeat the purpose of their work [13,118]. Therefore, future research should further investigate the potential long-term consequences and ethical aspects of XR use in ES.
+
+
+
+
+
+ 5.5 Methodological Agenda
+
+
+
+5.5.1 Consistency in measurement instruments in XR research for ES and exploring associated effects between variables. As the body of empirical research on XR technology in ES expands, recurrent obstacles continue to impede the field's growth. Our analyses showed that research on XR in ES is scattered, with a lack of uniformity in assessment instruments and a limited grasp of relationships between measured outcome variables. Although recurrent themes were identified among the measured outcomes, measurement instruments and the context in which outcome variables were analyzed varied greatly. Out of 48 empirical studies, there were only 7 instances of the same measurement scale being used; 3 used the Connectedness to Nature Scale (CNS) [2,38,98] and 4 used the Spatial Presence Experience Scale (SPES) [18,19,45,70]. Otherwise, there were no similarities between the scales utilized, making it difficult to compare study results. This inconsistency makes it challenging to comprehend the impacts of XR on variables such as behavior and immersion in the context of ES, a difficulty compounded by the possibility of related effects between variables. Of the analyzed literature, 13 papers mentioned associated effects between the variables they measured such as how participants' spatial presence related to perceived temporal distance or severity of environmental issues [19] (Figure 4). Only two associated effects were referenced by more than one study: self-efficacy and engagement [108,109], as well as immersion and spatial presence [18,45]. These findings are a crucial first step towards a better understanding of how to utilize XR to support ES; however, additional research is required to validate their observations. Through a deeper understanding of how measured variables such as self-efficacy and engagement influence each other, we can develop experiences not only within XR but also using other platforms that are more suited to solve the diverse difficulties of ES. This can then be expanded to other aspects of sustainability such as societal and economical ones. However, research must be replicable, which necessitates consistency in data gathering. As many of the studies in this literature review relied on Likert scales, one method to achieve this consistency would be through relying on validated measurement scales (e.g., CNS or SPES) instead of custom ones, but also including objective measurements such as physiological ones, allowing other researchers to replicate research and test other approaches and compare how they perform against existing studies. Therefore, future research in ES should aim for consistency among validated measurement instruments (e.g., CNS and SPES) in XR studies and further investigate associated effects between the measured outcome variables (e.g., spatial presence and behavioral intentions, or interaction and learning).
+
+
+5.5.2 Use of multiple measurement methods and data types in XR research for ES. Along with consistency in measurement instruments, future research should include multiple measurement methods and data types. Our analyses found that most studies relied on data collected through questionnaires (see 4.4.1), which provides versatility for almost all necessary scenarios and needed data. However, as questionnaires rely on participants to self-report their experience, they can be susceptible to manipulation. When participants are asked about their feelings within a certain scenario, the questionnaire itself may bring about the very feelings that are meant to be measured, even if the participants had not previously felt them [148]. Researcher's attempts to engage individuals in ES are complicated by psychological and behavioral factors (see 2.1), which may not be readily captured by the participants' self-reflection. As filling out questionnaires also demands taking a break from an activity, participants may not recall the entirety of their experience or may forget details pertinent to researchers [148]. Other aspects to consider are social desirability bias [147] and demand characteristics [112] which can come through questionnaires but also other measurement methods. However, this high incidence of questionnaire usage is not exclusive to ES, as a separate study examining the methodology used in realism research in XR concluded the same and recommended that the area embrace other methodologies such as physiological measurements [55]. Adding physiological measurements such as skin conductance, eye tracking, or palmar sweat could provide additional data for understanding the complex psychological and behavioral factors underlying environmental engagement. If the XR application facilitates interaction, researchers may combine physiological measurements with their observations of how participants interacted with the XR environment and the visualized information. The XR applications could be configured to gather usage statistics and analytics to give an objective layer to researchers' observations of user behavior [55,96]. In turn, this could help researchers comprehend how users interact with XR to better design and implement XR in areas where it thrives, as described in Section 5.4.1. Research employing XR to induce pro-environmental behavior or attitudes could use diaries to better record change outside of the controlled laboratory setting and to provide participants with the opportunity to reflect on their experiences [82]. As we currently lack understanding of the long-term repercussions of XR usage in ES, diaries and comparable measures could bridge these knowledge gaps by providing data covering a longer time period. No measurement method is without limitations; yet each, when paired with other measurement instruments, can help us gain a deeper knowledge of the variables being measured [82,148]. Therefore, we suggest that future research involving XR for ES should aim to incorporate other measurement methods to provide objective and subjective data to create a better understanding of XR's influence.
+
+
+5.5.3 Conducting comparative studies of interactive XR applications for ES to other media. As seen in section 4.4.2, most of this review's empirical research measured an XR intervention's effect on aspects such as learning, connectedness with nature, behavioral intentions, etc. Among these studies, some conducted comparative studies of how XR performed against other media such as watching the same video on a monitor screen [45,105] or exposure to traditional teaching methods [157,159]. However, as mentioned, 33% of VR empirical research within our analyses used 360° video or a documentary approach (see Table 6) and out of the twelve comparative studies using VR all but three [1,2,114] used 360° video conditions (see section 4.4.2). Non-interactive interventions, such as the documentary approach in VR, may be informative, but they forgo the opportunity to give users a sense of control over their actions and outcomes by interactively engaging them in the topic. Considering the first-person efficacy-related components that play a role in addressing ES on an individual level, comparative studies analyzing the interactive aspects of XR versus other methods could provide greater insight into the development of more effective strategies for overcoming the obstacles discussed in section 2.1 such as locus of control, self-efficacy, and psychological distance. Notably, 9 of the 14 comparative studies using VR and AR focused on learning, leaving little empirical evidence of how AR and VR perform compared to other methods in the additional areas of research present in this literature review such as behavior change, awareness, and connectedness with nature. In the absence of comparative studies, it is possible that XR in ES is being utilized more for its novelty than for the advantages it offers over other media. Nevertheless, as the novelty wears off, we must have solutions that justify using XR over more accessible mediums. Even though XR technology has become significantly more accessible over the past decade, technologies such as VR HMDs are still not as accessible due to economic and ergonomic limitations. Without comparing the performance of XR to other relevant media in areas such as learning, behavioral intentions, or self-efficacy, ES lacks the necessary critical engagement to comprehend the benefits of XR technology and apply them appropriately. This is not only a problem when examining XR research within ES; it should be common practice when evaluating any new technical method/approach. By evaluating the effectiveness of various interventions and methodologies, we may acquire a better understanding of their strengths and shortcomings. This in turn allows us to apply specific approaches and methods to areas where they will achieve the highest benefit for addressing the environmental, societal, and economical aspects of sustainability. Therefore, to aid in research and the development of ES, researchers should strive in the future to perform more comparative studies between interactive XR applications and other mediums.
+
+
+
+
+
+
+ 6 CONCLUSIONS
+
+
+In this article, we systematically reviewed 80 papers related to the use of XR technology in environmental sustainability (ES). Specifically, we investigated the context of how the technology had been applied within the field, the engagement and interaction methods used within the AR and VR applications, and the effects studied so far of XR use for environmental topics. Our analysis indicated that the area of research has been growing, with VR research showing significant growth since 2018. Research in the field has been mostly targeted toward education and ecology, though among empirical research there was some interest in AR and VR use for behavior change and connectedness with nature.
+Although our results highlighted the diversity in the engagement and interaction methods found in the discussed XR application, this diversity, along with the wide context for their implementation, made it difficult to pinpoint a pattern among the measured outcome variables in the literature. To address this and other knowledge gaps identified through our analysis, we propose a thematic, theoretical, and methodological agenda for future research to guide subsequent work and highlight new avenues of interest. Thematically, we propose further expanding the research focus of future work in how XR and its features are used in ES, to understand its effect on individuals’ behavior and connection with nature. Theoretically, advancing our understanding of AR and VR technology itself and user influence on the effectiveness of the technology would help understand areas XR excels in, ethical concerns, and who might benefit the most from its use. Methodologically, to increase research quality, we propose diversifying the types of data gathered in studies concerning XR use in environmental subjects and striving for consistency in measurement instruments utilized, as well as conducting further comparative studies between XR and other media to better understand the influence that AR and VR can have in furthering the goals of ES.
+
+
+
+
+
+
+ACKNOWLEDGMENTS
+
+
+This research was made possible by the Academy of Finland Flagship Programme (337653—Forest-Human-Machine Interplay (UNITE)) and the Nessling Foundation (project No 202100217). We would like to thank Dr. Velvet Spors for their valuable feedback during the editing process.
+
+
+
+
+REFERENCES
+
+
+
+Sun Joo (Grace) Ahn, Jeremy N. Bailenson, and Dooyeon Park. 2014. Short- and long-term effects of embodied experiences in immersive virtual environments on environmental locus of control and behavior. Comput Human Behav 39, (October 2014), 235–245. DOI:https://doi.org/10.1016/j.chb.2014.07.025
+Sun Joo Grace Ahn, Joshua Bostick, Elise Ogle, Kristine L. Nowak, Kara T. McGillicuddy, and Jeremy N. Bailenson. 2016. Experiencing Nature: Embodying Animals in Immersive Virtual Environments Increases Inclusion of Nature in Self and Involvement With Nature. Journal of Computer-Mediated Communication 21, 6 (November 2016), 399–419. DOI:https://doi.org/10.1111/jcc4.12173
+Sun Joo (Grace) Ahn, Amanda Minh Tran Le, and Jeremy Bailenson. 2013. The Effect of Embodied Experiences on Self-Other Merging, Attitude, and Helping Behavior. Media Psychol 16, 1 (January 2013), 7–38. DOI:https://doi.org/10.1080/15213269.2012.755877
+Masaki Akaike, Yuko Takishita, Li Wenjun, and Junichi Hoshino. 2021. Marine Biology VR Learning Support System Using Fish Swimming Simulation. In 2021 Nicograph International (NicoInt), IEEE, Engineering Tsukuba Univ., Tsukuba, Japan, 86–89. DOI:https://doi.org/10.1109/NICOINT52941.2021.00023
+Bastain Albers, N. de Lange, and Shaojuan Xu. 2017. Augmented citizen science for environmental monitoring and education. The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences XLII-2/W7, 2W7 (September 2017), 1–4. DOI:https://doi.org/10.5194/isprs-archives-XLII-2-W7-1-2017
+Devon Allcoat and Adrian von Mühlenen. 2018. Learning in virtual reality: Effects on performance, emotion and engagement. Research in Learning Technology 26, 0 (November 2018). DOI:https://doi.org/10.25304/rlt.v26.2140
+Alsina-Jurnet and José Gutiérrez-Maldonado. 2010. Influence of personality and individual abilities on the sense of presence experienced in anxiety triggering virtual environments. Int J Hum Comput Stud 68, 10 (October 2010), 788–801. DOI:https://doi.org/10.1016/J.IJHCS.2010.07.001
+Lawrence J. Axelrod and Darrin R. Lehman. 1993. Responding to environmental concerns: What factors guide individual action? J Environ Psychol 13, 2 (June 1993), 149–159. DOI:https://doi.org/10.1016/S0272-4944(05)80147-1
+Baptiste Barbot and James C. Kaufman. 2020. What makes immersive virtual reality the ultimate empathy machine? Discerning the underlying mechanisms of change. Comput Human Behav 111, (October 2020), 106431. DOI:https://doi.org/10.1016/j.chb.2020.106431
+Dom Barnard. 2022. History of VR - Timeline of Events and Tech Development. VirtualSpeech. Retrieved October 24, 2022 from https://virtualspeech.com/blog/history-of-vr
+Matthew Barnidge, Lindsey A. Sherrill, Bumsoo Kim, Eric Cooks, Danielle Deavours, Michael Viehouser, Ryan Broussard, and Jiehua Zhang. 2022. The Effects of Virtual Reality News on Learning about Climate Change. Mass Commun Soc 25, 1 (January 2022), 1–24. DOI:https://doi.org/10.1080/15205436.2021.1925300
+Miguel Barreda-Ángeles, Sara Aleix-Guillaume, and Alexandre Pereda-Baños. 2021. Virtual reality storytelling as a double-edged sword: Immersive presentation of nonfiction 360°-video is associated with impaired cognitive information processing. Commun Monogr 88, 2 (April 2021), 154–173. DOI:https://doi.org/10.1080/03637751.2020.1803496
+Eric P.S. Baumer and M. Six Silberman. 2011. When the implication is not to design (technology). Conference on Human Factors in Computing Systems - Proceedings (2011), 2271–2274. DOI:https://doi.org/10.1145/1978942.1979275
+Julia Belger. 2021. DC: Clinical Application of Immersive VR in Spatial Cognition: The Assessment of Spatial Memory and Unilateral Spatial Neglect in Neurological Patients. In 2021 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), IEEE, University Hospital Leipzig, Max Planck Institute for Human Cognitive and Brain Sciences, Clinic for Cognitive Neurology, 723–724. DOI:https://doi.org/10.1109/VRW52623.2021.00244
+Paul Benolken, Andre Bresges, Daniel Wickeroth, and Florian Genz. 2021. VR based Explorations of the Rhine Riverbed. In 2021 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), IEEE, University of Cologne, 291–296. DOI:https://doi.org/10.1109/VRW52623.2021.00059
+Christina Bremer, Bran Knowles, and Adrian Friday. 2022. Have We Taken On Too Much?: A Critical Review of the Sustainable HCI Landscape. Conference on Human Factors in Computing Systems - Proceedings 11, (April 2022). DOI:https://doi.org/10.1145/3491102.3517609
+Priska Breves and Esther Greussing. 2021. Virtual and Augmented Reality in Environmental Communication. In The Handbook of International Trends in Environmental Communication. Routledge, New York, 449–463. DOI:https://doi.org/10.4324/9780367275204-34
+Priska Breves and Vivien Heber. 2020. Into the Wild: The Effects of 360° Immersive Nature Videos on Feelings of Commitment to the Environment. Environ Commun 14, 3 (April 2020), 332–346. DOI:https://doi.org/10.1080/17524032.2019.1665566
+Priska Breves and Holger Schramm. 2021. Bridging psychological distance: The impact of immersive media on distant and proximal environmental issues. Comput Human Behav 115, (February 2021), 106606. DOI:https://doi.org/10.1016/j.chb.2020.106606
+Mila Bujić, Mikko Salminen, Joseph Macey, and Juho Hamari. 2020. “Empathy machine”: how virtual reality affects human rights attitudes. Internet Research 30, 5 (June 2020), 1407–1425. DOI:https://doi.org/10.1108/INTR-07-2019-0306
+Lénaïc B. Cadet and Hanna Chainay. 2021. How preadolescents and adults remember and experience virtual reality: The role of avatar incarnation, emotion, and sense of presence. Int J Child Comput Interact 29, (September 2021), 100299. DOI:https://doi.org/10.1016/j.ijcci.2021.100299
+Juliano Calil, Geraldine Fauville, Anna Queiroz, Kelly Leo, Alyssa Mann, Tiffany Wise-West, Paulo Salvatore, and Jeremy Bailenson. 2021. Using Virtual Reality in Sea Level Rise Planning and Community Engagement—An Overview. Water (Basel) 13, 9 (April 2021), 1142. DOI:https://doi.org/10.3390/w13091142
+Nurit Carmi and Shaul Kimhi. 2015. Further Than the Eye Can See: Psychological Distance and Perception of Environmental Threats. Human and Ecological Risk Assessment: An International Journal 21, 8 (November 2015), 2239–2257. DOI:https://doi.org/10.1080/10807039.2015.1046419
+Tom Chandler, Anna E. Richards, Bernhard Jenny, Fiona Dickson, Jiawei Huang, Alexander Klippel, Michael Neylan, Florence Wang, and Suzanne M. Prober. 2022. Immersive landscapes: modelling ecosystem reference conditions in virtual reality. Landsc Ecol 37, 5 (May 2022), 1293–1309. DOI:https://doi.org/10.1007/s10980-021-01313-8
+Rong Chi Chang. 2011. A Novel AR-Based Interactive E-Learning Platform. Adv Mat Res 403–408, (November 2011), 1244–1248. DOI:https://doi.org/10.4028/www.scientific.net/AMR.403-408.1244
+Rong-Chi Chang, Shih-Nung Chen, Hong-Jui Lin, and Huei-Min Yu. 2010. DUIRA: An interactive learning platform for mixed reality. In 2010 IEEE International Conference on Multimedia and Expo, IEEE, Department of Digital Media Design, Asia University, Taichung 413, Taiwan, 1152–1153. DOI:https://doi.org/10.1109/ICME.2010.5583212
+Umer Asghar Chattha, Uzair Iqbal Janjua, Fozia Anwar, Tahir Mustafa Madni, Muhammad Faisal Cheema, and Sana Iqbal Janjua. 2020. Motion Sickness in Virtual Reality: An Empirical Evaluation. IEEE Access 8, (2020), 130486–130499. DOI:https://doi.org/10.1109/ACCESS.2020.3007076
+[Alice Chirico and Andrea Gaggioli. 2019. Virtual-Reality Music-Based Elicitation of Awe: When Silence Is Better Than Thousands Sounds. In Lecture Notes of the Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering, LNICST. Department of Psychology, Università Cattolica Del Sacro Cuore, Milan, Italy, 1–11. DOI:https://doi.org/10.1007/978-3-030-25872-6_1
+Alice Chirico, Giulia Wally Scurati, Chiara Maffi, Siyuan Huang, Serena Graziosi, Francesco Ferrise, and Andrea Gaggioli. 2021. Designing virtual environments for attitudes and behavioral change in plastic consumption: a comparison between concrete and numerical information. Virtual Real 25, 1 (March 2021), 107–121. DOI:https://doi.org/10.1007/s10055-020-00442-w
+Pietro Cipresso and Giuseppe Riva. 2016. Personality Assessment in Ecological Settings by Means of Virtual Reality. In The Wiley Handbook of Personality Assessment. Istituto Auxologico Italiano, Milan, Italy, 240–248. DOI:https://doi.org/10.1002/9781119173489.ch18
+Julia Cooke, Yoseph Araya, Karen L. Bacon, Joanna M. Bagniewska, Lesley C. Batty, Tom R. Bishop, Moya Burns, Magda Charalambous, David R. Daversa, Liam R. Dougherty, Miranda Dyson, Adam M. Fisher, Dan Forman, Cristina Garcia, Ewan Harney, Thomas Hesselberg, Elizabeth A. John, Robert J. Knell, Kadmiel Maseyk, Alice L. Mauchline, Julie Peacock, Angelo P. Pernetta, Jeremy Pritchard, William J. Sutherland, Rebecca L. Thomas, Barbara Tigar, Philip Wheeler, Rachel L. White, Nicholas T. Worsfold, and Zenobia Lewis. 2021. Teaching and learning in ecology: a horizon scan of emerging challenges and solutions. Oikos 130, 1 (January 2021), 15–28. DOI:https://doi.org/10.1111/oik.07847
+Elizabeth A. Corley, P. Craig Boardman, and Barry Bozeman. 2006. Design and the management of multi-institutional research collaborations: Theoretical implications from two case studies. Res Policy 35, 7 (September 2006), 975–993. DOI:https://doi.org/10.1016/J.RESPOL.2006.05.003
+Francis Ray Cristobal, Michael Dodge, Briana Noll, Nickolas Rosenberg, John Burns, Joseph Sanchez, Drew Gotshalk, Kailey Pascoe, and Alexandra Runyan. 2020. Exploration of Coral Reefs in Hawai‘i through Virtual Reality: Hawaiian Coral Reef Museum VR. In Practice and Experience in Advanced Research Computing, ACM, New York, NY, USA, 545–546. DOI:https://doi.org/10.1145/3311790.3404542
+Telmo Cruz, Susana Bras, Sandra C. Soares, and Jose Maria Fernandes. 2015. Monitoring physiology and behavior using Android in phobias. In 2015 37th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), IEEE, IEETA, DETI, Universidade de Aveiro, Aveiro, Portugal, 3739–3742. DOI:https://doi.org/10.1109/EMBC.2015.7319206
+Michael F. Curran, Kyle Summerfield, Emma-Jane Alexander, Shawn G. Lanning, Anna R. Schwyter, Melanie L. Torres, Scott Schell, Karen Vaughan, Timothy J. Robinson, and Douglas I. Smith. 2020. Use of 3-Dimensional Videography as a Non-Lethal Way to Improve Visual Insect Sampling. Land (Basel) 9, 10 (September 2020), 340. DOI:https://doi.org/10.3390/land9100340
+Daniel David, Silviu-Andrei Matu, and Oana Alexandra David. 2013. New Directions in Virtual Reality-Based Therapy for Anxiety Disorders. Int J Cogn Ther 6, 2 (June 2013), 114–137. DOI:https://doi.org/10.1521/ijct.2013.6.2.114
+Andrew Davies, Stephan Manning, and Jonas Söderlund. 2018. When neighboring disciplines fail to learn from each other: The case of innovation and project management research. Res Policy 47, 5 (June 2018), 965–979. DOI:https://doi.org/10.1016/J.RESPOL.2018.03.002
+S. Anthony Deringer and Adam Hanley. 2021. Virtual Reality of Nature Can Be as Effective as Actual Nature in Promoting Ecological Behavior. Ecopsychology 13, 3 (September 2021), 219–226. DOI:https://doi.org/10.1089/eco.2020.0044
+John Desnoyers-Stewart, Ekaterina R. Stepanova, Philippe Pasquier, and Bernhard E. Riecke. 2019. JeL. In Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems, ACM, New York, NY, USA, 1–6. DOI:https://doi.org/10.1145/3290607.3312845
+Matilda Eve Dunn, Gautam Shah, and Diogo Veríssimo. 2021. Stepping into the Wildeverse: Evaluating the impact of augmented reality mobile gaming on pro‐conservation behaviours. People and Nature 3, 6 (December 2021), 1205–1217. DOI:https://doi.org/10.1002/pan3.10273
+ANTHONY DUNNE and FIONA RABY. 2013. Speculative Everything: Design, Fiction, and Social Dreaming. The MIT Press. Retrieved from http://www.jstor.org/stable/j.ctt9qf7j7
+Marek Fabrika, Peter Valent, and Ľubomír Scheer. 2018. Thinning trainer based on forest-growth model, virtual reality and computer-aided virtual environment. Environmental Modelling & Software 100, (February 2018), 11–23. DOI:https://doi.org/10.1016/j.envsoft.2017.11.015
+Géraldine Fauville, Anna C. M. Queiroz, Linda Hambrick, Bryan A. Brown, and Jeremy N. Bailenson. 2021. Participatory research on using virtual reality to teach ocean acidification: a study in the marine education community. Environ Educ Res 27, 2 (January 2021), 254–278. DOI:https://doi.org/10.1080/13504622.2020.1803797
+Lauren Feldman and P. Sol Hart. 2018. Is There Any Hope? How Climate Change News Imagery and Text Influence Audience Emotions and Support for Climate Mitigation Policies. Risk Analysis 38, 3 (March 2018), 585–602. DOI:https://doi.org/10.1111/risa.12868
+Elin Filter, Alexander Eckes, Florian Fiebelkorn, and Alexander Georg Büssing. 2020. Virtual Reality Nature Experiences Involving Wolves on YouTube: Presence, Emotions, and Attitudes in Immersive and Nonimmersive Settings. Sustainability 12, 9 (May 2020), 3823. DOI:https://doi.org/10.3390/su12093823
+Erika R. Francis, Stephanie Bernard, Morgan L. Nowak, Sarah Daniel, and Johnathan A. Bernard. 2020. Operating Room Virtual Reality Immersion Improves Self-Efficacy Amongst Preclinical Physician Assistant Students. J Surg Educ 77, 4 (July 2020), 947–952. DOI:https://doi.org/10.1016/j.jsurg.2020.02.013
+Lisa A. Frank. 2013. Using the computer-driven VR environment to promote experiences of natural world immersion. In Proceedings of SPIE - The International Society for Optical Engineering, Beckman Institute of Advanced Science and Research, University of Illinois Urbana-Champagne, 405 North Mathews Avenue, Urbana, IL 61801, United States, 86490A. DOI:https://doi.org/10.1117/12.2004685
+Stephanie Freeman, B. Derrick Taff, Zachary D. Miller, Jacob A. Benfield, and Peter Newman. 2021. Acceptability factors for wildlife approach in park and protected area settings. J Environ Manage 286, (May 2021), 112276. DOI:https://doi.org/10.1016/j.jenvman.2021.112276
+Pedro Gamito, Jorge Oliveira, Catarina Alves, Nuno Santos, Cátia Coelho, and Rodrigo Brito. 2020. Virtual Reality-Based Cognitive Stimulation to Improve Cognitive Functioning in Community Elderly: A Controlled Study. Cyberpsychol Behav Soc Netw 23, 3 (March 2020), 150–156. DOI:https://doi.org/10.1089/cyber.2019.0271
+Pedro Gamito, Jorge Oliveira, Ludmila Pinto, Luis Rodelo, Paulo Lopes, Rodrigo Brito, and Diogo Morais. 2014. Normative data for a cognitive VR rehab serious games-based approach. In Proceedings of the 8th International Conference on Pervasive Computing Technologies for Healthcare, ICST, COPELABS/Lusophone University, Lisbon, 376, Portugal, 443–446. DOI:https://doi.org/10.4108/icst.pervasivehealth.2014.255277
+Andreas Gerndt, Robert Miller, Simon Su, Ehab Meselhe, and Carolina Cruz-Neira. 2009. Interactive exploration of coastal restoration modeling in virtual environments. In Proceedings of SPIE - The International Society for Optical Engineering, German Aerospace Center (DLR), Simulation and Software Technology, Brunswick, Germany, 72380F. DOI:https://doi.org/10.1117/12.807171
+Robert Gifford. 2011. The Dragons of Inaction: Psychological Barriers That Limit Climate Change Mitigation and Adaptation. American Psychologist 66, 4 (May 2011), 290–302. DOI:https://doi.org/10.1037/a0023566
+Robert Gifford and Andreas Nilsson. 2014. Personal and social factors that influence pro-environmental concern and behaviour: A review. International Journal of Psychology 49, 3 (January 2014), n/a-n/a. DOI:https://doi.org/10.1002/ijop.12034
+Enrico Giordano, Alessandra Magagna, Luca Ghiraldi, Claudio Bertok, Francesca Lozar, Anna d'Atri, Francesco dela Pierre, Marco Giardino, Marcello Natalicchio, Luca Martire, Pierangelo Clari, and Donata Violanti. 2015. Multimedia and Virtual Reality for Imaging the Climate and Environment Changes Through Earth History: Examples from the Piemonte (NW Italy) Geoheritage (PROGEO-Piemonte Project). In Engineering Geology for Society and Territory - Volume 8. Springer International Publishing, Cham, 257–260. DOI:https://doi.org/10.1007/978-3-319-09408-3_44
+Guilherme Goncalves, Pedro Monteiro, Hugo Coelho, Miguel Melo, and Maximino Bessa. 2021. Systematic Review on Realism Research Methodologies on Immersive Virtual, Augmented and Mixed Realities. IEEE Access 9, (2021), 89150–89161. DOI:https://doi.org/10.1109/ACCESS.2021.3089946
+D. Liliana González-Hernández, Erik W. Meijles, and Frank Vanclay. 2019. Household Barriers to Climate Change Action: Perspectives from Nuevo Leon, Mexico. Sustainability 11, 15 (August 2019), 4178. DOI:https://doi.org/10.3390/su11154178
+David Philip Green, James Hodge, Kirsten Cater, Stuart Gray, Guy Schofield, Mandy Rose, and Chris Bevan. 2019. Using design fiction to explore the ethics of VR “in the wild.” TVX 2019 - Proceedings of the 2019 ACM International Conference on Interactive Experiences for TV and Online Video (June 2019), 293–299. DOI:https://doi.org/10.1145/3317697.3323346
+Cathy Hackl. 2020. Social VR, Facebook Horizon And The Future Of Social Media Marketing. Forbes. Retrieved December 12, 2022 from https://www.forbes.com/sites/cathyhackl/2020/08/30/social-vr-facebook-horizon–the-future-of-social-media-marketing/?sh=41310f665b19
+Lon Hansson, Teresa Cerratto Pargman, and Daniel Pargman. 2021. A decade of sustainable hci connecting shci to the sustainable development goals. Conference on Human Factors in Computing Systems - Proceedings (May 2021). DOI:https://doi.org/10.1145/3411764.3445069
+Maria C. R. Harrington, Zack Bledsoe, Chris Jones, James Miller, and Thomas Pring. 2021. Designing a Virtual Arboretum as an Immersive, Multimodal, Interactive, Data Visualization Virtual Field Trip. Multimodal Technologies and Interaction 5, 4 (April 2021), 18. DOI:https://doi.org/10.3390/mti5040018
+P. Sol Hart and Lauren Feldman. 2016. The influence of climate change efficacy messages and efficacy beliefs on intended political participation. PLoS One 11, 8 (August 2016), e0157658. DOI:https://doi.org/10.1371/journal.pone.0157658
+Mike Hazas, A. J. Bernheim Brush, and James Scott. 2012. Sustainability does not begin with the individual. Interactions 19, 5 (September 2012), 14–17. DOI:https://doi.org/10.1145/2334184.2334189
+Wennan He, Ben Swift, Henry Gardner, Mingze Xi, and Matt Adcock. 2019. Reducing Latency in a Collaborative Augmented Reality Service. In The 17th International Conference on Virtual-Reality Continuum and its Applications in Industry, ACM, New York, NY, USA, 1–9. DOI:https://doi.org/10.1145/3359997.3365699
+Jorge Fernández Herrero and Gonzalo Lorenzo. 2020. An immersive virtual reality educational intervention on people with autism spectrum disorders (ASD) for the development of communication skills and problem solving. Educ Inf Technol (Dordr) 25, 3 (May 2020), 1689–1722. DOI:https://doi.org/10.1007/S10639-019-10050-0/FIGURES/11
+Aalap Herur-Raman, Neil D. Almeida, Walter Greenleaf, Dorian Williams, Allie Karshenas, and Jonathan H. Sherman. 2021. Next-Generation Simulation—Integrating Extended Reality Technology Into Medical Education. Front Virtual Real 2, (September 2021), 115. DOI:https://doi.org/10.3389/FRVIR.2021.693399/BIBTEX
+Kazuki Hiramoto and Kazuhiko Hamamoto. 2018. Study on the Difference of Reaching Cognition Between the Real and the Virtual Environment Using HMD and its Compensation. In 2018 11th Biomedical Engineering International Conference (BMEiCON), IEEE, Graduate School of Information and Telecommunication Engineering, Tokai University, Tokyo, Japan, 1–5. DOI:https://doi.org/10.1109/BMEiCON.2018.8609971
+Karen Hofman, Gabby Walters, and Karen Hughes. 2022. The effectiveness of virtual vs real-life marine tourism experiences in encouraging conservation behaviour. Journal of Sustainable Tourism 30, 4 (April 2022), 742–766. DOI:https://doi.org/10.1080/09669582.2021.1884690
+I. Hsuan Hsu, Xiu Wei Zhang, and Fong Ming Shyu. 2018. An application for geovisualization with virtual reality built on Unity3D. Proceedings of 4th IEEE International Conference on Applied System Innovation 2018, ICASI 2018 (2018), 1082–1085. DOI:https://doi.org/10.1109/ICASI.2018.8394466
+Jiawei Huang, Melissa S. Lucash, Robert M. Scheller, and Alexander Klippel. 2019. Visualizing Ecological Data in Virtual Reality. In 2019 IEEE Conference on Virtual Reality and 3D User Interfaces (VR), IEEE, Pennsylvania State University, United States, 1311–1312. DOI:https://doi.org/10.1109/VR.2019.8797771
+Jiawei Huang, Melissa S. Lucash, Robert M. Scheller, and Alexander Klippel. 2021. Walking through the forests of the future: using data-driven virtual reality to visualize forests under climate change. International Journal of Geographical Information Science 35, 6 (June 2021), 1155–1178. DOI:https://doi.org/10.1080/13658816.2020.1830997
+Intergovernmental Panel on Climate Change. 2022. Climate Change 2022: Impacts, Adaptation and Vulnerability | Climate Change 2022: Impacts, Adaptation and Vulnerability. IPCC Sixth Assessment Report. Retrieved June 15, 2022 from https://www.ipcc.ch/report/ar6/wg2/
+Santiago González Izard and Juan Antonio Juanes Méndez. 2016. Virtual reality medical training system. In Proceedings of the Fourth International Conference on Technological Ecosystems for Enhancing Multiculturality, ACM, New York, NY, USA, 479–485. DOI:https://doi.org/10.1145/3012430.3012560
+Randolph L. Jackson and Eileen Fagan. 2000. Collaboration and learning within immersive virtual reality. In Proceedings of the third international conference on Collaborative virtual environments - CVE ’00, ACM Press, New York, New York, USA, 83–92. DOI:https://doi.org/10.1145/351006.351018
+Yuan Jia, Bin Xu, Yamini Karanam, and Stephen Voida. 2016. Personality, targeted/gamification:/A/survey/study/on/ personality/traits/and/motivational/affordances. Conference on Human Factors in Computing Systems - Proceedings (May 2016), 2001–2013. DOI:https://doi.org/10.1145/2858036.2858515
+Somya Joshi and Teresa Cerratto Pargman. 2015. In search of fairness: Critical design alternatives for sustainability. Critical Alternatives - Proceedings of the 5th Decennial Aarhus Conference, CA 2015 (August 2015), 37–40. DOI:https://doi.org/10.7146/AAHCC.V1I1.21301
+Amy M. Kamarainen, Shari Metcalf, Tina Grotzer, Allison Browne, Diana Mazzuca, M. Shane Tutwiler, and Chris Dede. 2013. EcoMOBILE: Integrating augmented reality and probeware with environmental education field trips. Comput Educ 68, (October 2013), 545–556. DOI:https://doi.org/10.1016/j.compedu.2013.02.018
+Eric Klopfer and Josh Sheldon. 2010. Augmenting your own reality: Student authoring of science-based augmented reality games. New Dir Youth Dev 2010, 128 (December 2010), 85–94. DOI:https://doi.org/10.1002/yd.378
+Anja Kollmuss and Julian Agyeman. 2002. Mind the Gap: Why do people act environmentally and what are the barriers to pro-environmental behavior? Environ Educ Res 8, 3 (August 2002), 239–260. DOI:https://doi.org/10.1080/13504620220145401
+Aphile Kondlo, Andre Henney, Antoine Bagula, Olasupo Ajayi, and Laurenda van Breda. 2020. Self-Guided Virtual Tour Using Augmented Reality. In 2020 ITU Kaleidoscope: Industry-Driven Digital Transformation (ITU K), IEEE, University of the Western Cape, Department of Computer Science, South Africa, 1–5. DOI:https://doi.org/10.23919/ITUK50268.2020.9303209
+Paul A.M. van Lange and Anna L. Huckelba. 2021. Psychological distance: How to make climate change less abstract and closer to the self. Curr Opin Psychol 42, (December 2021), 49–53. DOI:https://doi.org/10.1016/j.copsyc.2021.03.011
+Chin Loong Law, Paul Roe, and Jinglan Zhang. 2012. Using mobile technology and augmented reality to increase data reliability for environmental assessment. In Proceedings of the 24th Australian Computer-Human Interaction Conference on - OzCHI ’12, ACM Press, New York, New York, USA, 327–330. DOI:https://doi.org/10.1145/2414536.2414589
+Jonathan Lazar, Jinjuan Heidi Feng, and Harry Hochheiser. 2017. Research Methods in Human-Computer Interaction. Elsevier Inc. DOI:https://doi.org/10.1016/b978-0-444-70536-5.50047-6
+Joey J. Lee and Elliot Hu-Au. 2021. E3XR: An Analytical Framework for Ethical, Educational and Eudaimonic XR Design. Front Virtual Real 2, (October 2021), 135. DOI:https://doi.org/10.3389/FRVIR.2021.697667/BIBTEX
+Min Lee, Yawen Yu, and Carol Chan. 2020. Characterising shared epistemic agency in a knowledge building learning environment. In Computer-Supported Collaborative Learning Conference, CSCL, The University of Hong Kong, Hong Kong, 919–920. Retrieved from https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102854157&partnerID=40&md5=4a309b69d2af9220625b5cf2f253f1d9
+Yue Leng, Chi Chun Chen, Qiuyue Sun, Jian Huang, and Yuhao Zhu. 2019. Energy-efficient video processing for virtual reality. Proc Int Symp Comput Archit (June 2019), 91–103. DOI:https://doi.org/10.1145/3307650.3322264
+Daniel Levi and Sara Kocher. 1999. Virtual Nature. Environ Behav 31, 2 (March 1999), 203–226. DOI:https://doi.org/10.1177/00139169921972065
+Gunnar Liestol, Andrew Morrison, and Tomas Stenarson. 2014. Visualization of climate change in situ. In 2014 International Conference on Virtual Systems & Multimedia (VSMM), IEEE, Dept. of Media and Communication, University of Oslo, Oslo, Norway, 251–256. DOI:https://doi.org/10.1109/VSMM.2014.7136657
+Joseph Lindley and Paul Coulton. 2015. Game of Drones. In Proceedings of the 2015 Annual Symposium on Computer-Human Interaction in Play, ACM, New York, NY, USA, 613–618. DOI:https://doi.org/10.1145/2793107.2810300
+Joseph Lindley and Paul Coulton. 2016. Pushing the limits of design fiction: The case for fictional research papers. Conference on Human Factors in Computing Systems - Proceedings (May 2016), 4032–4043. DOI:https://doi.org/10.1145/2858036.2858446
+Qin Liu and Ruliang Zhang. 2019. Research on the Reconstruction of Ecological Environment by Virtual Reality Technology from Philosophical Perspective. IOP Conf Ser Earth Environ Sci 252, 4 (July 2019), 042038. DOI:https://doi.org/10.1088/1755-1315/252/4/042038
+Jung-Hua Lo, Yu-Fan Lai, and Tzu-Lun Hsu. 2021. The Study of AR-Based Learning for Natural Science Inquiry Activities in Taiwan's Elementary School from the Perspective of Sustainable Development. Sustainability 13, 11 (June 2021), 6283. DOI:https://doi.org/10.3390/su13116283
+George F. Loewenstein, Christopher K. Hsee, Elke U. Weber, and Ned Welch. 2001. Risk as Feelings. Psychol Bull 127, 2 (2001), 267–286. DOI:https://doi.org/10.1037/0033-2909.127.2.267
+Valentina Lorenzetti, Bruno Melo, Rodrigo Basílio, Chao Suo, Murat Yücel, Carlos J. Tierra-Criollo, and Jorge Moll. 2018. Emotion Regulation Using Virtual Environments and Real-Time fMRI Neurofeedback. Front Neurol 9, JUL (July 2018). DOI:https://doi.org/10.3389/fneur.2018.00390
+Irene Lorenzoni, Sophie Nicholson-Cole, and Lorraine Whitmarsh. 2007. Barriers perceived to engaging with climate change among the UK public and their policy implications. Global Environmental Change 17, 3–4 (August 2007), 445–459. DOI:https://doi.org/10.1016/j.gloenvcha.2007.01.004
+Su-Ju Lu and Ying-Chieh Liu. 2015. Integrating augmented reality technology to enhance children's learning in marine education. Environ Educ Res 21, 4 (May 2015), 525–541. DOI:https://doi.org/10.1080/13504622.2014.911247
+Antti Luoto. 2018. Systematic literature review on user logging in virtual reality. ACM International Conference Proceeding Series (October 2018), 110–117. DOI:https://doi.org/10.1145/3275116.3275123
+Maciej Serda, Fernando Gertum Becker, Michelle Cleary, R M Team, Helge Holtermann, Disclaimer The, National Agenda, Political Science, S K Sk, Raymond Hinnebusch, Raymond Hinnebusch A, Itamar Rabinovich, Yosef Olmert, D Q G L Q Uld, W K H Uroh Ri, Vodp Lq, W K H Frxqwu, Errn Zklfk, L v Edvhg, R Q Wkh, Fernando Gertum Becker, N Aboueldahab, Rana Khalaf, Laura Ruiz de Elvira, Tina Zintl, Raymond Hinnebusch, Mahdi Karimi, Seyed Masoud Mousavi Shafaee, Dylan O ’driscoll, Stephen Watts, Jennifer Kavanagh, Bryan Frederick, Tova Norlen, Angela O'Mahony, Phoenix Voorhies, Thomas Szayna, Nancy Spalding, Matthew O. Jackson, Massimo Morelli, Biswajit Satpathy, Balakrishnan Muniapan, Mohan Dass, Polya Katsamunska, Yasemin Pamuk, Andreas Stahn, European Commission, T E D Piccone, Mr. Kofi Annan, Simeon Djankov, M Reynal-Querol, Mathieu Couttenier, Raphaël Soubeyran, Petr Vym, Economics Prague, World Bank, Cristina Bodea, Nicholas Sambanis, Adrian Florea, Adrian Florea, Mahdi Karimi, Seyed Masoud Mousavi Shafaee, Nancy Spalding, Nicholas Sambanis, and حسن فاطمی. 2022. Ethical decision-making and virtual environments. Uniwersytet śląski 7, 1 (March 2022), 343–354. DOI:https://doi.org/10.2/JQUERY.MIN.JS
+David M. Markowitz, Rob Laha, Brian P. Perone, Roy D. Pea, and Jeremy N. Bailenson. 2018. Immersive Virtual Reality Field Trips Facilitate Learning About Climate Change. Front Psychol 9, NOV (November 2018). DOI:https://doi.org/10.3389/fpsyg.2018.02364
+Maria Marloth, Jennifer Chandler, and K. A.I. Vogeley. 2020. Psychiatric Interventions in Virtual Reality: Why We Need an Ethical Framework. Cambridge Quarterly of Healthcare Ethics 29, 4 (October 2020), 574–584. DOI:https://doi.org/10.1017/S0963180120000328
+V., Masson-Delmotte, P. Zhai, H.-O. Pörtner, D. Roberts, J. Skea, P.R. Shukla, A. Pirani, W. Moufouma-Okia, C. Péan, R. Pidcock, S. Connors, J.B.R. Matthews, Y. Chen, X. Zhou, M.I. Gomis, E. Lonnoy, T. Maycock, and M. Tignor, and T. Waterfield. 2022. Summary for Policymakers. In Global Warming of 1.5°C. Cambridge University Press, 1–24. DOI:https://doi.org/10.1017/9781009157940.001
+Jurate Miliute-Plepiene, Olle Hage, Andrius Plepys, and Algirdas Reipas. 2016. What motivates households recycling behaviour in recycling schemes of different maturity? Lessons from Lithuania and Sweden. Resour Conserv Recycl 113, (October 2016), 40–52. DOI:https://doi.org/10.1016/j.resconrec.2016.05.008
+Sarah Morélot, Alain Garrigou, Julie Dedieu, and Bernard N'Kaoua. 2021. Virtual reality for fire safety training: Influence of immersion and sense of presence on conceptual and procedural acquisition. Comput Educ 166, (2021). DOI:https://doi.org/10.1016/j.compedu.2021.104145
+Susanne C. Moser. 2010. Communicating climate change: History, challenges, process and future directions. Wiley Interdiscip Rev Clim Change 1, 1 (January 2010), 31–53. DOI:https://doi.org/10.1002/wcc.11
+Kiersten Muenchinger, Jon Lindsay, John Morkes, Connie Chiueh, John Russell, and Tony Vastola. 1997. BIOculars. In CHI ’97 extended abstracts on Human factors in computing systems looking to the future - CHI ’97, ACM Press, New York, New York, USA, 365. DOI:https://doi.org/10.1145/1120212.1120436
+Katherine M Nelson, Eva Anggraini, and Achim Schlüter. 2020. Virtual reality as a tool for environmental conservation and fundraising. PLoS One 15, 4 (April 2020), e0223631. DOI:https://doi.org/10.1371/journal.pone.0223631
+Katy Newton and Karin Soukup. 2016. The Storyteller's Guide to the Virtual Reality Audience. Medium. Retrieved August 11, 2022 from https://medium.com/stanford-d-school/the-storyteller-s-guide-to-the-virtual-reality-audience-19e92da57497
+Sarah O'Brien. 2020. Playing the Zombie: Participation and Interpassivity in Gothic XR. Body, Space & Technology 19, 1 (February 2020), 76. DOI:https://doi.org/10.16995/bst.332
+Jeeyun Oh, Eunjoo Jin, Sabitha Sudarshan, Soya Nah, and Na Yu. 2021. Does 360-degree Video Enhance Engagement with Global Warming?: The Mediating Role of Spatial Presence and Emotions. Environ Commun 15, 6 (August 2021), 731–748. DOI:https://doi.org/10.1080/17524032.2021.1891945
+Jeeyun Oh, Sabitha Sudarshan, Eunjoo Jin, Soya Nah, and Na Yu. 2020. How 360-Degree Video Influences Content Perceptions and Environmental Behavior: The Moderating Effect of Environmental Self-Efficacy. Sci Commun 42, 4 (August 2020), 423–453. DOI:https://doi.org/10.1177/1075547020932174
+Saffron J. O'Neill, Maxwell Boykoff, Simon Niemeyer, and Sophie A. Day. 2013. On the use of imagery for climate change engagement. Global Environmental Change 23, 2 (April 2013), 413–421. DOI:https://doi.org/10.1016/j.gloenvcha.2012.11.006
+Saffron J. O'Neill and Nicholas Smith. 2014. Climate change and visual imagery. Wiley Interdisciplinary Reviews: Climate Change 5, 73–87. DOI:https://doi.org/10.1002/wcc.249
+Martin T. Orne. 1996. Demand Characteristics. In Introducing Psychological Research. Macmillan Education UK, London, 395–401. DOI:https://doi.org/10.1007/978-1-349-24483-6_59
+Kuo-Liang Ou, Shun-Ting Chu, and Wernhuar Tarng. 2021. Development of a Virtual Wetland Ecological System Using VR 360° Panoramic Technology for Environmental Education. Land (Basel) 10, 8 (August 2021), 829. DOI:https://doi.org/10.3390/land10080829
+Kuo-Liang Ou, Yao-Hui Liu, and Wernhuar Tarng. 2021. Development of a Virtual Ecological Environment for Learning the Taipei Tree Frog. Sustainability 13, 11 (May 2021), 5911. DOI:https://doi.org/10.3390/su13115911
+Matthew J. Page, Joanne E. McKenzie, Patrick M. Bossuyt, Isabelle Boutron, Tammy C. Hoffmann, Cynthia D. Mulrow, Larissa Shamseer, Jennifer M. Tetzlaff, Elie A. Akl, Sue E. Brennan, Roger Chou, Julie Glanville, Jeremy M. Grimshaw, Asbjørn Hróbjartsson, Manoj M. Lalu, Tianjing Li, Elizabeth W. Loder, Evan Mayo-Wilson, Steve McDonald, Luke A. McGuinness, Lesley A. Stewart, James Thomas, Andrea C. Tricco, Vivian A. Welch, Penny Whiting, and David Moher. 2021. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. Syst Rev 10, 1 (December 2021), 89. DOI:https://doi.org/10.1186/s13643-021-01626-4
+Ariya Pakinee and Kitti Puritat. 2021. Designing a gamified e-learning environment for teaching undergraduate ERP course based on big five personality traits. Educ Inf Technol (Dordr) 26, 4 (July 2021), 4049–4067. DOI:https://doi.org/10.1007/S10639-021-10456-9/TABLES/5
+Xueni Pan and Antonia F. de C. Hamilton. 2018. Why and how to use virtual reality to study human social interaction: The challenges of exploring a new research landscape. British Journal of Psychology 109, 3 (August 2018), 395–417. DOI:https://doi.org/10.1111/bjop.12290
+Daniel Pargman and Barath Raghavan. 2014. Rethinking sustainability in computing: From buzzword to non-negotiable limits. Proceedings of the NordiCHI 2014: The 8th Nordic Conference on Human-Computer Interaction: Fun, Fast, Foundational (October 2014), 638–647. DOI:https://doi.org/10.1145/2639189.2639228
+Paul Mealy. The History of Virtual and Augmented Reality. Dummies. Retrieved June 22, 2022 from https://www.blu-digital.co.uk/blog/the-history-of-virtual-reality-and-augmented-reality
+John v. Pavlik and Frank Bridges. 2013. The Emergence of Augmented Reality (AR) as a Storytelling Medium in Journalism. Journal Commun Monogr 15, 1 (March 2013), 4–59. DOI:https://doi.org/10.1177/1522637912470819
+Gustav B. Petersen, Sara Klingenberg, Richard E. Mayer, and Guido Makransky. 2020. The virtual field trip: Investigating how to optimize immersive virtual learning in climate change education. British Journal of Educational Technology 51, 6 (November 2020), 2099–2115. DOI:https://doi.org/10.1111/bjet.12991
+Daniel Pimentel, Ricardo Amaya, Shiva Halan, Sri Kalyanaraman, and Jeremy Bailenson. 2019. Climate Change on Your Plate: A VR Seafood Buffet Experience. In 2019 IEEE Conference on Virtual Reality and 3D User Interfaces (VR), IEEE, Media Effects Technology Lab, University of FloridaFL, United States, 1120–1121. DOI:https://doi.org/10.1109/VR.2019.8798076
+Daniel Pimentel and Sri Kalyanaraman. 2021. Virtual climate scientist: A VR learning experience about paleoclimatology for underrepresented students. Interactive Learning Environments (August 2021), 1–14. DOI:https://doi.org/10.1080/10494820.2021.1969582
+Daniel Pimentel, Sri Kalyanaraman, and Shiva Halan. 2018. Bigger is Better: A VR Penguin Rehabilitation Simulation to Study Animal Conservation Behaviors. In 2018 IEEE Games, Entertainment, Media Conference (GEM), IEEE, University of Florida, Media Effects Technology Lab, Gainesville, United States, 1–9. DOI:https://doi.org/10.1109/GEM.2018.8516548
+Hans-Otto Pörtner, Robert J. Scholes, John Agard, Emma Archer, Xuemei Bai, David Barnes, Michael Burrows, Lena Chan, Wai Lung (William) Cheung, Sarah Diamond, Camila Donatti, Carlos Duarte, Nico Eisenhauer, Wendy Foden, Maria A. Gasalla, Collins Handa, Thomas Hickler, Ove Hoegh-Guldberg, Kazuhito Ichii, Ute Jacob, Gregory Insarov, Wolfgang Kiessling, Paul Leadley, Rik Leemans, Lisa Levin, Michelle Lim, Shobha Maharaj, Shunsuke Managi, Pablo A. Marquet, Pamela McElwee, Guy Midgley, Thierry Oberdorff, David Obura, Balgis Osman Elasha, Ram Pandit, Unai Pascual, Aliny P F Pires, Alexander Popp, Victoria Reyes-García, Mahesh Sankaran, Josef Settele, Yunne-Jai Shin, Dejene W. Sintayehu, Peter Smith, Nadja Steiner, Bernardo Strassburg, Raman Sukumar, Christopher Trisos, Adalberto Luis Val, Jianguo Wu, Edvin Aldrian, Camille Parmesan, Ramon Pichs-Madruga, , Debra C. Roberts, Alex D. Rogers, Sandra Díaz, Markus Fischer, Shizuka Hashimoto, Sandra Lavorel, Ning Wu, and Hien Ngo. 2021. IPBES-IPCC co-sponsored workshop report on biodiversity and climate change. DOI:https://doi.org/10.5281/zenodo.5101125
+Monica Posluszny, Geon Soo Park, Irini Spyridakis, Sarina Katznelson, and Sam O'Brien. 2020. Promoting Sustainability through Virtual Reality: A Case Study of Climate Change Understanding with College Students. In 2020 IEEE Global Humanitarian Technology Conference (GHTC), IEEE, University of Washington, Human Centered Design Engineering, Seattle, WA, United States, 1–8. DOI:https://doi.org/10.1109/GHTC46280.2020.9342907
+Urooj S. Raja and Amanda R. Carrico. 2021. A Qualitative Exploration of Individual Experiences of Environmental Virtual Reality Through the Lens of Psychological Distance. Environ Commun 15, 5 (July 2021), 594–609. DOI:https://doi.org/10.1080/17524032.2020.1871052
+Jason Rambach, Gergana Lilligreen, Alexander Schäfer, Ramya Bankanal, Alexander Wiebel, and Didier Stricker. 2021. A Survey on Applications of Augmented, Mixed and Virtual Reality for Nature and Environment. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Augmented Vision department, German Research Center for Artificial Intelligence, Kaiserslautern, Germany, 653–675. DOI:https://doi.org/10.1007/978-3-030-77599-5_45
+E C Regan and K R Price. 1994. The frequency of occurrence and severity of side-effects of immersion virtual reality. Aviat Space Environ Med 65, 6 (June 1994), 527–30. Retrieved September 5, 2022 from http://www.ncbi.nlm.nih.gov/pubmed/8074626
+Albert Rizzo, Arno Hartholt, Mario Grimani, Andrew Leeds, and Matt Liewer. 2014. Virtual Reality Exposure Therapy for Combat-Related Posttraumatic Stress Disorder. Computer (Long Beach Calif) 47, 7 (July 2014), 31–37. DOI:https://doi.org/10.1109/MC.2014.199
+Adam C Roberts, You Win Yeap, Hook Soon Seah, Elliot Chan, Chee-Kiong Soh, and George I Christopoulos. 2019. Assessing the suitability of virtual reality for psychological testing. Psychol Assess 31, 3 (2019), 318–328. DOI:https://doi.org/10.1037/pas0000663
+Brendan Rooney, Katalin Balint, Thomas D Parsons, Colin Burke, Tess O'Leary, Sharon Chi Tak Lee, and Caroline Mantei. 2017. Attention and social cognition in virtual reality: The effect of engagement mode and character eye-gaze. Annual Review of CyberTherapy and Telemedicine 15, (2017), 82–87. Retrieved from https://www.scopus.com/inward/record.uri?eid=2-s2.0-85043783890&partnerID=40&md5=ff985484dfffca0cfac287688d88dc59
+Olayemi H. Rufai, Jianxun Chu, Sayibu Muhideen, Riffat Shahani, and Tunde S. Amosun. 2022. Exploring virtual reality technology and the role of mindfulness in promoting nuclear power knowledge and public acceptance in China. Int J Green Energy 19, 12 (September 2022), 1306–1317. DOI:https://doi.org/10.1080/15435075.2021.1992412
+Sergio Álvarez Sánchez, Laura Delgado Martín, Miguel Ángel Gimeno-González, Teresa Martín-Garcia, Fernando Almaraz-Menéndez, and Camilo Ruiz. 2016. Augmented reality sandbox. In Proceedings of the Fourth International Conference on Technological Ecosystems for Enhancing Multiculturality, ACM, New York, NY, USA, 599–602. DOI:https://doi.org/10.1145/3012430.3012580
+Alysson Diniz dos Santos, Francesco Strada, and Andrea Bottino. 2016. The Design of an Augmented Reality Collaborative Game for Sustainable Development. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Dipartimento di Automatica e Informatica, Politecnico di Torino, Torino, Italy, 15–23. DOI:https://doi.org/10.1007/978-3-319-50182-6_2
+Bruno Santos, Teresa Romão, A. Eduardo Dias, and Pedro Centieiro. 2013. eVision: A Mobile Game to Improve Environmental Awareness. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). CITI, DI-Faculdade de Ciências e Tecnologia, Universidade Nova de Lisboa, 2829-516 Caparica, Portugal, 380–391. DOI:https://doi.org/10.1007/978-3-319-03161-3_28
+Alexander Schnack, Malcolm J. Wright, and Jonathan Elms. 2021. Investigating the impact of shopper personality on behaviour in immersive Virtual Reality store environments. Journal of Retailing and Consumer Services 61, (July 2021), 102581. DOI:https://doi.org/10.1016/j.jretconser.2021.102581
+Benjamin Schöne, Joanna Kisker, Rebecca Sophia Sylvester, Elise Leila Radtke, and Thomas Gruber. 2021. Library for universal virtual reality experiments (luVRe): A standardized immersive 3D/360° picture and video database for VR based research. Current Psychology (May 2021). DOI:https://doi.org/10.1007/s12144-021-01841-1
+Nicola S. Schutte and Emma J. Stilinović. 2017. Facilitating empathy through virtual reality. Motiv Emot 41, 6 (December 2017), 708–712. DOI:https://doi.org/10.1007/s11031-017-9641-7
+Sabrina Scuri, Marta Ferreira, Nuno Jardim Nunes, Valentina Nisi, and Cathy Mulligan. 2022. Hiting the Triple Botom Line: Widening the HCI Approach to Sustainability. Conference on Human Factors in Computing Systems - Proceedings (April 2022). DOI:https://doi.org/10.1145/3491102.3517518
+Vincenzo Paolo Senese, Aniello Pascale, Luigi Maffei, Federico Cioffi, Ida Sergi, Augusto Gnisci, and Massimiliano Masullo. 2020. The Influence of Personality Traits on the Measure of Restorativeness in an Urban Park: A Multisensory Immersive Virtual Reality Study. In Smart Innovation, Systems and Technologies. Department of Psychology, University of Campania “Luigi Vanvitelli”, Caserta, Italy, 347–357. DOI:https://doi.org/10.1007/978-981-13-8950-4_31
+Larissa Shamseer, David Moher, Mike Clarke, Davina Ghersi, Alessandro Liberati, Mark Petticrew, Paul Shekelle, Lesley A Stewart, and PRISMA-P Group. 2015. Preferred reporting items for systematic review and meta-analysis protocols (PRISMA-P) 2015: elaboration and explanation. BMJ 350, jan02 1 (January 2015), g7647. DOI:https://doi.org/10.1136/bmj.g7647
+Nimrod Shanit, Adi Lavy, and Ina Fichman. 2021. Once Upon a Sea. In ACM SIGGRAPH 2021 Immersive Pavilion, ACM, New York, NY, USA, 1–2. DOI:https://doi.org/10.1145/3450615.3464536
+Bhanu Sharma, Narinder Pal Singh, Archana Mantri, Shubham Gargrish, Neha Tuli, and Shivam Sharma. 2021. Save the Earth: Teaching Environment Studies using Augmented Reality. In 2021 6th International Conference on Signal Processing, Computing and Control (ISPCC), IEEE, Institute Of Engineering Technology, Chitkara University, Punjab, India, 336–339. DOI:https://doi.org/10.1109/ISPCC53510.2021.9609463
+Stephen R.J. Sheppard. 2005. Landscape visualisation and climate change: The potential for influencing perceptions and behaviour. Environ Sci Policy 8, 6 (December 2005), 637–654. DOI:https://doi.org/10.1016/j.envsci.2005.08.002
+Yu Shu, Yen-Zhang Huang, Shu-Hsuan Chang, and Mu-Yen Chen. 2019. Do virtual reality head-mounted displays make a difference? A comparison of presence and self-efficacy between head-mounted displays and desktop computer-facilitated virtual environments. Virtual Real 23, 4 (December 2019), 437–446. DOI:https://doi.org/10.1007/s10055-018-0376-x
+Ove Sjöström and Dorthe Holst. 2002. Validity of a questionnaire survey: response patterns in different subgroups and the effect of social desirability. Acta Odontol Scand 60, 3 (January 2002), 136–140. DOI:https://doi.org/10.1080/000163502753740133
+Mel Slater, Domna Banakou, Alejandro Beacco, Jaime Gallego, Francisco Macia-Varela, and Ramon Oliva. 2022. A Separate Reality: An Update on Place Illusion and Plausibility in Virtual Reality. Front Virtual Real 3, (June 2022), 81. DOI:https://doi.org/10.3389/frvir.2022.914392
+Mel Slater and Maria v. Sanchez-Vives. 2016. Enhancing our lives with immersive virtual reality. Frontiers Robotics AI 3, DEC (December 2016), 74. DOI:https://doi.org/10.3389/FROBT.2016.00074/BIBTEX
+Robert Soden, Pradnaya Pathak, and Olivia Doggett. 2021. What We Speculate about When We Speculate about Sustainable HCI. Proceedings of 2021 4th ACM SIGCAS Conference on Computing and Sustainable Societies, COMPASS 2021 (June 2021), 188–198. DOI:https://doi.org/10.1145/3460112.3471956
+Alexandra D. Solomou, George Karetsos, Panayiotis Trigas, Nikolaos Proutsos, Evangelia v. Avramidou, Evangelia Korakaki, Konstantinos Kougioumoutzis, Aikaterini Goula, George Pavlidis, Spyridoula Stamouli, and K Tsagkari. 2020. Vascular plants of oiti and parnassos national parks of Greece, as important components of biodiversity and touring experiences. In CEUR Workshop Proceedings, Institute of Mediterranean and Forest Ecosystems, Hellenic Agricultural Organization DEMETER, Athens, Greece, 542–548. Retrieved from https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097523783&partnerID=40&md5=baf01a9cda6bacfbab6736149cf92425
+Hayeon Song, Soowon Park, Hakrim Kim, Suyeon Jo, Jung In Lee, Seong Jae Han, Inwook Choi, and Jun Young Lee. 2021. Is Anxiety-Inducing VR Experienced Differently Depending on Personality? The Mediating Role of Presence. IEEE Access 9, (2021), 42161–42168. DOI:https://doi.org/10.1109/ACCESS.2021.3064251
+Alexis D. Souchet, Stéphanie Philippe, Domitile Lourdeaux, and Laure Leroy. 2021. Measuring Visual Fatigue and Cognitive Load via Eye Tracking while Learning with Virtual Reality Head-Mounted Displays: A Review. https://doi.org/10.1080/10447318.2021.1976509 38, 9 (2021), 801–824. DOI:https://doi.org/10.1080/10447318.2021.1976509
+Alexa Spence, Wouter Poortinga, and Nick Pidgeon. 2012. The Psychological Distance of Climate Change. Risk Analysis 32, 6 (June 2012), 957–972. DOI:https://doi.org/10.1111/j.1539-6924.2011.01695.x
+Carolin Strassmann, Alexander Arntz, and Sabrina C. Eimler. 2020. Under The (Plastic) Sea - Sensitizing People Toward Ecological Behavior Using Virtual Reality Controlled by Users’ Physical Activity. In 2020 IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR), IEEE, University of Applied Sciences Ruhr West, Institute of Computer Science, Institute of Positive Computing, Bottrop, Germany, 166–173. DOI:https://doi.org/10.1109/AIVR50618.2020.00036
+Liujin Tang and Hong Zhong. 2021. The Construction and Application of Virtual Reality Technology in the New Ecotourism Model. In 2021 4th International Conference on Information Systems and Computer Aided Education, ACM, New York, NY, USA, 2231–2236. DOI:https://doi.org/10.1145/3482632.3484135
+Wernhuar Tarng and Kuo-Liang Ou. 2012. A Study of Campus Butterfly Ecology Learning System Based on Augmented Reality and Mobile Learning. In 2012 IEEE Seventh International Conference on Wireless, Mobile and Ubiquitous Technology in Education, IEEE, Graduate Institute of Computer Science, National Hsinchu University of Education, Hsinchu, Taiwan, 62–66. DOI:https://doi.org/10.1109/WMUTE.2012.17
+Wernhuar Tarng, Kuo-Liang Ou, Chuan-Sheng Yu, Fong-Lu Liou, and Hsin-Hun Liou. 2015. Development of a virtual butterfly ecological system based on augmented reality and mobile learning technologies. Virtual Real 19, 3–4 (November 2015), 253–266. DOI:https://doi.org/10.1007/s10055-015-0265-5
+Wernhuar Tarng, Wen-Shin. Tsai, Yu-Si Lin, and Chen-Kai Shiu. 2009. Instructional design using the virtual ecological pond for science education in elementary schools. World Acad Sci Eng Technol 37, (2009), 392–403. Retrieved from https://www.scopus.com/inward/record.uri?eid=2-s2.0-78651589169&partnerID=40&md5=8b535f5f113dce651ccb92a093097359
+Wernhuar Tarng, Chuan-Sheng Yu, Fong-Lu Liou, and Hsin-Hun Liou. 2013. Development of a virtual butterfly ecological system based on augmented reality and mobile learning technologies. In 2013 9th International Wireless Communications and Mobile Computing Conference (IWCMC), IEEE, Graduate Institute of e-Learning Technology, Taiwan, 674–679. DOI:https://doi.org/10.1109/IWCMC.2013.6583638
+Jeff Teper. 2022. Microsoft and Meta partner to deliver immersive experiences for the future of work and play. Official Microsoft Blog. Retrieved December 12, 2022 from https://blogs.microsoft.com/blog/2022/10/11/microsoft-and-meta-partner-to-deliver-immersive-experiences-for-the-future-of-work-and-play/
+Luca Turchet and Jhonny Hueller. 2020. Promoting Awareness on Sustainable Behavior Through an AR-Based Art Gallery. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Department of Information Engineering and Computer Science, University of Trento, Trento, Italy, 53–65. DOI:https://doi.org/10.1007/978-3-030-58468-9_4
+UN General Assembly. 2015. Transforming our world: the 2030 Agenda for Sustainable Development.
+Julie Vercelloni, Jon Peppinck, Edgar Santos-Fernandez, Miles McBain, Grace Heron, Tanya Dodgen, Erin E. Peterson, and Kerrie Mengersen. 2021. Connecting virtual reality and ecology: a new tool to run seamless immersive experiments in R. PeerJ Comput Sci 7, (June 2021), e544. DOI:https://doi.org/10.7717/peerj-cs.544
+Gregory W. Bennett and Liz Canner. 2019. Lost City of Mer. In SIGGRAPH Asia 2019 XR, ACM, New York, NY, USA, 25–26. DOI:https://doi.org/10.1145/3355355.3361897
+Kyra Wang, Zeynep Duygu Tekler, Lynette Cheah, Dorien Herremans, and Lucienne Blessing. 2021. Evaluating the Effectiveness of an Augmented Reality Game Promoting Environmental Action. Sustainability 13, 24 (December 2021), 13912. DOI:https://doi.org/10.3390/su132413912
+Po-Yen Wang, Hsin-Ta Lin, Shu-Ming Wang, and Huei-Tse Hou. 2019. The Development and Evaluation of an Educational Board Game with Augmented Reality Integrating Contextual Clues as Multi-Level Scaffolding for Learning Ecosystem Concepts. In 2019 IEEE International Conference on Consumer Electronics - Taiwan (ICCE-TW), IEEE, Mini Educational Game Development Group, Graduate Institute of Applied Science and Technology, National Taiwan University of Science and Technology, Taiwan, 1–2. DOI:https://doi.org/10.1109/ICCE-TW46550.2019.8991949
+Wernhuar Tarng. 2002. Development of Internet virtual butterfly museum. In International Conference on Computers in Education, 2002. Proceedings., IEEE Comput. Soc, Department of Mathematics and Science Education, National Hsin-Chu Teachers College, Hsin-Chu, Taiwan, 1139–1143. DOI:https://doi.org/10.1109/CIE.2002.1186174
+Ruth West, Todd Margolis, Jarlath O'Neil-Dunne, and Eitan Mendelowitz. 2012. MetaTree: augmented reality narrative explorations of urban forests. In Proceedings of SPIE - The International Society for Optical Engineering, University of California, San Diego, 9500 Gilman Drive MC 0037, San Diego, CA 92093-0037, United States, 82890G. DOI:https://doi.org/10.1117/12.912051
+G.H. Wheless, C.M. Lascara, A. Valle-Levinson, D.P. Brutzman, W. Sherman, W.L. Hibbard, and B.E. Paul. 1996. Virtual Chesapeake Bay: interacting with a coupled physical/biological model. IEEE Comput Graph Appl 16, 4 (July 1996), 52–57. DOI:https://doi.org/10.1109/38.511854
+Wing-Kwong Wong, Ching-Hsuan Lin, and Kai-Ping Chen. 2018. Spoonbill Game on Android Devices for Ecological Education. In 2018 IEEE 18th International Conference on Advanced Learning Technologies (ICALT), IEEE, Dept. of Electronic Engineering, National Yunlin University of Science and Technology, Douliu, Taiwan, 143–145. DOI:https://doi.org/10.1109/ICALT.2018.00041
+Maja Wrzesien and Mariano Alcañiz Raya. 2010. Learning in serious virtual worlds: Evaluation of learning effectiveness and appeal to students in the E-Junior project. Comput Educ 55, 1 (August 2010), 178–187. DOI:https://doi.org/10.1016/j.compedu.2010.01.003
+Maja Wrzesien, David Pérez López, and Mariano Alcañiz Raya. 2009. E-Junior. In Proceedings of the International Conference on Advances in Computer Enterntainment Technology - ACE ’09, ACM Press, New York, New York, USA, 319. DOI:https://doi.org/10.1145/1690388.1690447
+Xu Wu, Ren YiLong, Guo Wei, and He Jin. 2017. Research on the three-dimensional interactive restoration of ecological environment based on the new “grey box model” MR technology. In 2017 2nd IEEE International Conference on Computational Intelligence and Applications (ICCIA), IEEE, School of Electronic and Information Engineering, Yunnan Mmzu University, Kunming, China, 364–367. DOI:https://doi.org/10.1109/CIAPP.2017.8167240
+Nannan Xi and Juho Hamari. 2021. Shopping in virtual reality: A literature review and future agenda. J Bus Res 134, (September 2021), 37–58. DOI:https://doi.org/10.1016/j.jbusres.2021.04.075
+Kun-Ming Yu, Jo-Chi Chiu, Ming-Gong Lee, and Shih-Shih Chi. 2015. A mobile application for an ecological campus navigation system using augmented reality. In 2015 8th International Conference on Ubi-Media Computing (UMEDIA), IEEE, Computer Science and Information Engineering, Chung Hua University, Hsinchu, Taiwan, 17–22. DOI:https://doi.org/10.1109/UMEDIA.2015.7297421
+Jianzhong Zhou, Liwu Pan, and Mingtao Ge. 2013. Virtual visual simulation of urban lakes based on OpenSceneGraph. In 2013 3rd International Conference on Consumer Electronics, Communications and Networks, IEEE, School of Hydropower and Information Engineering, Huazhong University of Science and Technology, Wuhan, China, 723–726. DOI:https://doi.org/10.1109/CECNet.2013.6703433
+Cindy Ziker, Barbara Truman, and Heather Dodds. 2021. Cross Reality (XR): Challenges and Opportunities Across the Spectrum. In Innovative Learning Environments in STEM Higher Education. Nature Publishing Group, 55–77. DOI:https://doi.org/10.1007/978-3-030-58948-6_4
+The Paris Agreement | UNFCCC. Retrieved July 6, 2022 from https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement
+Content - How Scopus Works - Scopus. Elsevier Solutions. Retrieved September 14, 2022 from https://www.elsevier.com/solutions/scopus/how-scopus-works/content?dgcid=RN_AGCM_Sourced_300005030
+
+
+
+
+
+
+FOOTNOTE
+
+
+* Corresponding author.
+
+   This work is licensed under a Creative Commons Attribution International 4.0 License.
+CHI '23, April 23–28, 2023, Hamburg, Germany
+© 2023 Copyright held by the owner/author(s). ACM ISBN 978-1-4503-9421-5/23/04.DOI: https://doi.org/10.1145/3544548.3581147 
+
+
+
+
+

@@ -44,8 +44,8 @@ if __name__ == "__main__":
 
         # Use OpenAIs Assitant API to find statistical measures in the tables and text.
         print('API requests to find statistical parameters.')
-        # table_gpt.analyze_tables(TXT_TABLES, OPENAI_API_KEY)
-        # content_gpt.analyze_content(TXT_CONTENT, OPENAI_API_KEY)
+        table_gpt.analyze_tables(TXT_TABLES, OPENAI_API_KEY)
+        content_gpt.analyze_content(TXT_CONTENT, OPENAI_API_KEY)
 
     elif INPUT_PAPER.endswith('.html'):
         # Find and extract tables from the HTML-File.

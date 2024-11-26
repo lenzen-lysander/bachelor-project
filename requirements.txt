@@ -1,7 +1,7 @@
-openai
-PyPDF2
-pandas
-beautifulsoup4
-pdf2image
-pytesseract
-regex
+openai==1.7.2
+PyPDF2==2.12.1
+pandas==2.0.0
+beautifulsoup4==4.12.3
+pdf2image==1.16.3
+pytesseract==0.3.10
+regex==2023.10.3

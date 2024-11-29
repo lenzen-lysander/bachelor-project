@@ -1,5 +1,5 @@
 # bachelor-project
-This project automates the extraction of statistically relevant values from scientific papers in both PDF and HTML formats. The goal is to streamline the statistical review process by automatically identifying and extracting key statistical data, making it easier for analysts to review and analyze the information without manually searching through the papers. The core functionality of this project relies on the ChatGPT API by OpenAI. By utilizing this API, the system processes the content of research papers and extracts the most pertinent statistical information.
+This project automates the extraction of relevant values regarding statistical testing from scientific papers in both PDF and HTML formats. The goal is to streamline the statistical review process by automatically identifying and extracting key statistical data, making it easier for analysts to review and analyze the information without manually searching through the papers. The core functionality of this project relies on the ChatGPT API by OpenAI. By utilizing this API, the system processes the content of research papers and extracts the most pertinent statistical information.
 
 ## **Performance**
 - **HTML Support**: High performance in extracting statistical values from HTML versions of papers.
